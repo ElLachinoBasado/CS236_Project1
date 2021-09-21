@@ -1,5 +1,5 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 3.0)
 project(LexicalAnalyzer)
 set(CMAKE_CXX_STANDARD 20)
-add_executable(CS236_Project1 Automaton.h ColonAutomaton.cpp ColonAutomaton.h ColonDashAutomaton.cpp ColonDashAutomaton.h Lexer.cpp Lexer.h Token.cpp Token.h main.cpp MatcherAutomaton.cpp MatcherAutomaton.h)
+add_executable(CS236_Project1 Automaton.h ColonAutomaton.cpp ColonAutomaton.h ColonDashAutomaton.cpp ColonDashAutomaton.h Lexer.cpp Lexer.h Token.cpp Token.h main.cpp MatcherAutomaton.cpp MatcherAutomaton.h SchemesAutomaton.cpp SchemesAutomaton.h FactsAutomaton.cpp FactsAutomaton.h RulesAutomaton.cpp RulesAutomaton.h QueriesAutomaton.cpp QueriesAutomaton.h IdAutomaton.cpp IdAutomaton.h)
 file(COPY InputFiles DESTINATION ${CMAKE_BINARY_DIR})

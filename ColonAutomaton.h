@@ -3,8 +3,7 @@
 
 #include "Automaton.h"
 
-class ColonAutomaton : public Automaton
-{
+class ColonAutomaton : public Automaton {
 public:
     ColonAutomaton() : Automaton(TokenType::COLON) {}  // Call the base constructor
 

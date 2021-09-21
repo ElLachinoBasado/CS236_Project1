@@ -2,6 +2,11 @@
 #include "ColonAutomaton.h"
 #include "ColonDashAutomaton.h"
 #include "MatcherAutomaton.h"
+#include "SchemesAutomaton.h"
+#include "FactsAutomaton.h"
+#include "RulesAutomaton.h"
+#include "QueriesAutomaton.h"
+#include "IdAutomaton.h"
 #include <sstream>
 #include <iostream>
 #include <cctype>
@@ -18,9 +23,14 @@ vector<Token*> Lexer::getTokens() {
     return tokens;
 }
 void Lexer::CreateAutomata() {
+    automata.push_back(new SchemesAutomaton());
+    automata.push_back(new FactsAutomaton());
+    automata.push_back(new RulesAutomaton());
+    automata.push_back(new QueriesAutomaton());
     automata.push_back(new ColonAutomaton());
     automata.push_back(new ColonDashAutomaton());
     automata.push_back(new MatcherAutomaton());
+    automata.push_back(new IdAutomaton());
     // TODO: Add the other needed automata here
 }
 
@@ -34,7 +44,7 @@ void Lexer::Run(std::string& input) {
             lineNumber++;
             continue;
         }
-
+        while(line.size()>0){
             int maxRead = 0;
             Automaton* maxAutomaton = automata.front();
             while (isspace(line[0])) {
@@ -51,7 +61,6 @@ void Lexer::Run(std::string& input) {
 
             if (maxRead > 0) {
                 Token* newToken = maxAutomaton->CreateToken(line.substr(0,maxRead),lineNumber);
-                lineNumber++;
                 tokens.push_back(newToken);
             } else {
                 maxRead = 1;
@@ -59,5 +68,7 @@ void Lexer::Run(std::string& input) {
                 tokens.push_back(newToken);
             }
             line.erase(0, maxRead);
+        }
+        lineNumber++;
     }
 }
