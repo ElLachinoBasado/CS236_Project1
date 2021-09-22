@@ -10,8 +10,13 @@ void UnclosedStringAutomaton::S0(const std::string &input) {
 }
 
 void UnclosedStringAutomaton::S1(const std::string &input) {
-    if (index > input.size() || input[index] == '\n') {
+    if (index > input.size()) {
 
+    } else if (input[index] == '\n') {
+        newLines++;
+        inputRead++;
+        index++;
+        S1(input);
     } else if (input[index] == '\'') {
         inputRead++;
         index++;

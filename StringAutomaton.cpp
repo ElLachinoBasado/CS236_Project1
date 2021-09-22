@@ -14,7 +14,10 @@ void StringAutomaton::S1(const std::string &input) {
     if (index > input.size()) {
         Serr();
     } else if (input[index] == '\n') {
-        Serr();
+        newLines++;
+        inputRead++;
+        index++;
+        S1(input);
     } else if (input[index] == '\'') {
         inputRead++;
         index++;
