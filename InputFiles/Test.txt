@@ -1,4 +1,13 @@
-
+'a string that does not end
+#|
+R
+|#
+yo#thisisacomment
+#thirdcomment
+''
+'Hello world'
+'I''m coding'
+'Let's eat'
     ::-
 :-
 +
@@ -9,6 +18,7 @@
 SchemesFacts
 Facts Rules
 Rules
+#|
 Queries
 yourmama?isaverynicelady
-QueGETREKT
+QueGETREKT'

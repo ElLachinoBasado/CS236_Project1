@@ -7,7 +7,10 @@
 #include "RulesAutomaton.h"
 #include "QueriesAutomaton.h"
 #include "IdAutomaton.h"
-#include <sstream>
+#include "StringAutomaton.h"
+#include "BlockCommentAutomaton.h"
+#include "UnclosedStringAutomaton.h"
+#include "UnclosedBlockCommentAutomaton.h"
 #include <iostream>
 #include <cctype>
 
@@ -31,44 +34,49 @@ void Lexer::CreateAutomata() {
     automata.push_back(new ColonDashAutomaton());
     automata.push_back(new MatcherAutomaton());
     automata.push_back(new IdAutomaton());
+    automata.push_back(new UnclosedStringAutomaton());
+    automata.push_back(new StringAutomaton());
+    automata.push_back(new UnclosedBlockCommentAutomaton());
+    automata.push_back(new BlockCommentAutomaton());
+
     // TODO: Add the other needed automata here
 }
 
 void Lexer::Run(std::string& input) {
     int lineNumber = 1;
     //read and iterate through string
-    istringstream f(input);
-    string line;
-    while (getline(f, line)) { //retrieves a line
-        if (line == "") {
+    string line = input;
+    while (line.size() > 0) {
+        if (line[0] == '\n') {
+            line.erase(line.begin());
             lineNumber++;
             continue;
         }
-        while(line.size()>0){
-            int maxRead = 0;
-            Automaton* maxAutomaton = automata.front();
-            while (isspace(line[0])) {
-                line.erase(line.begin());
-            }
-
-            for (int i = 0; i < automata.size(); i++) {
-                int inputRead = automata.at(i)->Start(line);
-                if (inputRead > maxRead) {
-                    maxRead = inputRead;
-                    maxAutomaton = automata.at(i);
-                }
-            }
-
-            if (maxRead > 0) {
-                Token* newToken = maxAutomaton->CreateToken(line.substr(0,maxRead),lineNumber);
-                tokens.push_back(newToken);
-            } else {
-                maxRead = 1;
-                Token* newToken = new Token(TokenType::UNDEFINED, line.substr(0,maxRead), lineNumber);
-                tokens.push_back(newToken);
-            }
-            line.erase(0, maxRead);
+        int maxRead = 0;
+        Automaton* maxAutomaton = automata.front();
+        while (isspace(line[0])) { //deletes whitespace at front of string
+            line.erase(line.begin());
         }
-        lineNumber++;
+
+        for (int i = 0; i < automata.size(); i++) {
+            int inputRead = automata.at(i)->Start(line);
+            if (inputRead > maxRead) {
+                maxRead = inputRead;
+                maxAutomaton = automata.at(i);
+            }
+        }
+
+        if (maxRead > 0) {
+            Token* newToken = maxAutomaton->CreateToken(line.substr(0,maxRead),lineNumber);
+            tokens.push_back(newToken);
+            if (maxAutomaton->NewLinesRead() > 0) {
+                lineNumber += maxAutomaton->NewLinesRead();
+            }
+        } else {
+            maxRead = 1;
+            Token* newToken = new Token(TokenType::UNDEFINED, line.substr(0,maxRead), lineNumber);
+            tokens.push_back(newToken);
+        }
+        line.erase(0, maxRead);
     }
 }
