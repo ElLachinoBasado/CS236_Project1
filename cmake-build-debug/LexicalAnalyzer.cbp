@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="LexicalAnalyzer"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="msvc8"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Users/Helaman/CLionProjects/CS236_Project1/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\Helaman\CLionProjects\CS236_Project1\cmake-build-debug\Makefile VERBOSE=1 all"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\Helaman\CLionProjects\CS236_Project1\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\Helaman\CLionProjects\CS236_Project1\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\Helaman\CLionProjects\CS236_Project1\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="CS236_Project1">
+				<Option output="C:/Users/Helaman/CLionProjects/CS236_Project1/cmake-build-debug/CS236_Project1.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Helaman/CLionProjects/CS236_Project1/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\Helaman\CLionProjects\CS236_Project1\cmake-build-debug\Makefile VERBOSE=1 CS236_Project1"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\Helaman\CLionProjects\CS236_Project1\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\Helaman\CLionProjects\CS236_Project1\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\Helaman\CLionProjects\CS236_Project1\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="CS236_Project1/fast">
+				<Option output="C:/Users/Helaman/CLionProjects/CS236_Project1/cmake-build-debug/CS236_Project1.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Helaman/CLionProjects/CS236_Project1/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\Helaman\CLionProjects\CS236_Project1\cmake-build-debug\Makefile VERBOSE=1 CS236_Project1/fast"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\Helaman\CLionProjects\CS236_Project1\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\Helaman\CLionProjects\CS236_Project1\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\Helaman\CLionProjects\CS236_Project1\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/Users/Helaman/CLionProjects/CS236_Project1/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\Helaman\CLionProjects\CS236_Project1\cmake-build-debug\Makefile VERBOSE=1 edit_cache"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\Helaman\CLionProjects\CS236_Project1\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\Helaman\CLionProjects\CS236_Project1\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\Helaman\CLionProjects\CS236_Project1\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/Helaman/CLionProjects/CS236_Project1/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\Helaman\CLionProjects\CS236_Project1\cmake-build-debug\Makefile VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\Helaman\CLionProjects\CS236_Project1\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\Helaman\CLionProjects\CS236_Project1\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\Helaman\CLionProjects\CS236_Project1\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/Automaton.h">
+			<Option target="CS236_Project1"/>
+		</Unit>
+		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/BlockCommentAutomaton.cpp">
+			<Option target="CS236_Project1"/>
+		</Unit>
+		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/BlockCommentAutomaton.h">
+			<Option target="CS236_Project1"/>
+		</Unit>
+		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/ColonAutomaton.cpp">
+			<Option target="CS236_Project1"/>
+		</Unit>
+		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/ColonAutomaton.h">
+			<Option target="CS236_Project1"/>
+		</Unit>
+		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/ColonDashAutomaton.cpp">
+			<Option target="CS236_Project1"/>
+		</Unit>
+		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/ColonDashAutomaton.h">
+			<Option target="CS236_Project1"/>
+		</Unit>
+		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/FactsAutomaton.cpp">
+			<Option target="CS236_Project1"/>
+		</Unit>
+		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/FactsAutomaton.h">
+			<Option target="CS236_Project1"/>
+		</Unit>
+		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/IdAutomaton.cpp">
+			<Option target="CS236_Project1"/>
+		</Unit>
+		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/IdAutomaton.h">
+			<Option target="CS236_Project1"/>
+		</Unit>
+		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/Lexer.cpp">
+			<Option target="CS236_Project1"/>
+		</Unit>
+		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/Lexer.h">
+			<Option target="CS236_Project1"/>
+		</Unit>
+		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/LineCommentAutomaton.cpp">
+			<Option target="CS236_Project1"/>
+		</Unit>
+		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/LineCommentAutomaton.h">
+			<Option target="CS236_Project1"/>
+		</Unit>
+		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/MatcherAutomaton.cpp">
+			<Option target="CS236_Project1"/>
+		</Unit>
+		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/MatcherAutomaton.h">
+			<Option target="CS236_Project1"/>
+		</Unit>
+		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/QueriesAutomaton.cpp">
+			<Option target="CS236_Project1"/>
+		</Unit>
+		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/QueriesAutomaton.h">
+			<Option target="CS236_Project1"/>
+		</Unit>
+		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/RulesAutomaton.cpp">
+			<Option target="CS236_Project1"/>
+		</Unit>
+		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/RulesAutomaton.h">
+			<Option target="CS236_Project1"/>
+		</Unit>
+		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/SchemesAutomaton.cpp">
+			<Option target="CS236_Project1"/>
+		</Unit>
+		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/SchemesAutomaton.h">
+			<Option target="CS236_Project1"/>
+		</Unit>
+		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/StringAutomaton.cpp">
+			<Option target="CS236_Project1"/>
+		</Unit>
+		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/StringAutomaton.h">
+			<Option target="CS236_Project1"/>
+		</Unit>
+		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/Token.cpp">
+			<Option target="CS236_Project1"/>
+		</Unit>
+		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/Token.h">
+			<Option target="CS236_Project1"/>
+		</Unit>
+		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/UnclosedBlockCommentAutomaton.cpp">
+			<Option target="CS236_Project1"/>
+		</Unit>
+		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/UnclosedBlockCommentAutomaton.h">
+			<Option target="CS236_Project1"/>
+		</Unit>
+		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/UnclosedStringAutomaton.cpp">
+			<Option target="CS236_Project1"/>
+		</Unit>
+		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/UnclosedStringAutomaton.h">
+			<Option target="CS236_Project1"/>
+		</Unit>
+		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/main.cpp">
+			<Option target="CS236_Project1"/>
+		</Unit>
+		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
