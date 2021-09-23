@@ -50,7 +50,7 @@ void Lexer::Run(std::string& input) {
         int maxRead = 0;
         Automaton* maxAutomaton = automata.front();
         while (isspace(line[0])) { //deletes whitespace at front of string
-            if (line[0] == '\r\n') {
+            if (line[0] == '\n') {
                 line.erase(line.begin());
                 lineNumber++;
                 continue;
