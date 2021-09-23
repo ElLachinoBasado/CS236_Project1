@@ -85,4 +85,5 @@ void Lexer::Run(std::string& input) {
     }
     Token* newToken = new Token(TokenType::EOF_TYPE,"",lineNumber);
     tokens.push_back(newToken);
+    cout << endl;
 }
