@@ -27,7 +27,7 @@ int main(int argc, char** argv) {
 
     //TODO: retrieve and print Tokens
     vector<Token*> allTokens = lexer->getTokens();
-    for (int i = 0; i < allTokens.size(); i++) {
+    for (long unsigned int i = 0; i < allTokens.size(); i++) {
         cout << allTokens.at(i)->toString() << endl;
     }
 

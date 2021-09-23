@@ -59,7 +59,7 @@ void Lexer::Run(std::string& input) {
             }
         }
 
-        for (int i = 0; i < automata.size(); i++) {
+        for (long unsigned int i = 0; i < automata.size(); i++) {
             int inputRead = automata.at(i)->Start(line);
             if (inputRead > maxRead) {
                 maxRead = inputRead;
