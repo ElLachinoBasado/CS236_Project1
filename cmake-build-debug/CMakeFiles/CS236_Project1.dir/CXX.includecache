@@ -10,43 +10,21 @@ C:/Users/Helaman/CLionProjects/CS236_Project1/Automaton.h
 Token.h
 C:/Users/Helaman/CLionProjects/CS236_Project1/Token.h
 
-C:/Users/Helaman/CLionProjects/CS236_Project1/BlockCommentAutomaton.cpp
-BlockCommentAutomaton.h
-C:/Users/Helaman/CLionProjects/CS236_Project1/BlockCommentAutomaton.h
-
 C:/Users/Helaman/CLionProjects/CS236_Project1/BlockCommentAutomaton.h
 Automaton.h
 C:/Users/Helaman/CLionProjects/CS236_Project1/Automaton.h
-
-C:/Users/Helaman/CLionProjects/CS236_Project1/ColonAutomaton.cpp
-ColonAutomaton.h
-C:/Users/Helaman/CLionProjects/CS236_Project1/ColonAutomaton.h
 
 C:/Users/Helaman/CLionProjects/CS236_Project1/ColonAutomaton.h
 Automaton.h
 C:/Users/Helaman/CLionProjects/CS236_Project1/Automaton.h
 
-C:/Users/Helaman/CLionProjects/CS236_Project1/ColonDashAutomaton.cpp
-ColonDashAutomaton.h
-C:/Users/Helaman/CLionProjects/CS236_Project1/ColonDashAutomaton.h
-
 C:/Users/Helaman/CLionProjects/CS236_Project1/ColonDashAutomaton.h
 Automaton.h
 C:/Users/Helaman/CLionProjects/CS236_Project1/Automaton.h
 
-C:/Users/Helaman/CLionProjects/CS236_Project1/FactsAutomaton.cpp
-FactsAutomaton.h
-C:/Users/Helaman/CLionProjects/CS236_Project1/FactsAutomaton.h
-
 C:/Users/Helaman/CLionProjects/CS236_Project1/FactsAutomaton.h
 Automaton.h
 C:/Users/Helaman/CLionProjects/CS236_Project1/Automaton.h
-
-C:/Users/Helaman/CLionProjects/CS236_Project1/IdAutomaton.cpp
-IdAutomaton.h
-C:/Users/Helaman/CLionProjects/CS236_Project1/IdAutomaton.h
-cctype
--
 
 C:/Users/Helaman/CLionProjects/CS236_Project1/IdAutomaton.h
 Automaton.h
@@ -92,49 +70,21 @@ C:/Users/Helaman/CLionProjects/CS236_Project1/Automaton.h
 Token.h
 C:/Users/Helaman/CLionProjects/CS236_Project1/Token.h
 
-C:/Users/Helaman/CLionProjects/CS236_Project1/LineCommentAutomaton.cpp
-LineCommentAutomaton.h
-C:/Users/Helaman/CLionProjects/CS236_Project1/LineCommentAutomaton.h
-
-C:/Users/Helaman/CLionProjects/CS236_Project1/LineCommentAutomaton.h
-Automaton.h
-C:/Users/Helaman/CLionProjects/CS236_Project1/Automaton.h
-
-C:/Users/Helaman/CLionProjects/CS236_Project1/MatcherAutomaton.cpp
-MatcherAutomaton.h
-C:/Users/Helaman/CLionProjects/CS236_Project1/MatcherAutomaton.h
-
 C:/Users/Helaman/CLionProjects/CS236_Project1/MatcherAutomaton.h
 Automaton.h
 C:/Users/Helaman/CLionProjects/CS236_Project1/Automaton.h
-
-C:/Users/Helaman/CLionProjects/CS236_Project1/QueriesAutomaton.cpp
-QueriesAutomaton.h
-C:/Users/Helaman/CLionProjects/CS236_Project1/QueriesAutomaton.h
 
 C:/Users/Helaman/CLionProjects/CS236_Project1/QueriesAutomaton.h
 Automaton.h
 C:/Users/Helaman/CLionProjects/CS236_Project1/Automaton.h
 
-C:/Users/Helaman/CLionProjects/CS236_Project1/RulesAutomaton.cpp
-RulesAutomaton.h
-C:/Users/Helaman/CLionProjects/CS236_Project1/RulesAutomaton.h
-
 C:/Users/Helaman/CLionProjects/CS236_Project1/RulesAutomaton.h
 Automaton.h
 C:/Users/Helaman/CLionProjects/CS236_Project1/Automaton.h
 
-C:/Users/Helaman/CLionProjects/CS236_Project1/SchemesAutomaton.cpp
-SchemesAutomaton.h
-C:/Users/Helaman/CLionProjects/CS236_Project1/SchemesAutomaton.h
-
 C:/Users/Helaman/CLionProjects/CS236_Project1/SchemesAutomaton.h
 Automaton.h
 C:/Users/Helaman/CLionProjects/CS236_Project1/Automaton.h
-
-C:/Users/Helaman/CLionProjects/CS236_Project1/StringAutomaton.cpp
-StringAutomaton.h
-C:/Users/Helaman/CLionProjects/CS236_Project1/StringAutomaton.h
 
 C:/Users/Helaman/CLionProjects/CS236_Project1/StringAutomaton.h
 Automaton.h
@@ -144,29 +94,11 @@ C:/Users/Helaman/CLionProjects/CS236_Project1/Token.h
 string
 -
 
-C:/Users/Helaman/CLionProjects/CS236_Project1/UnclosedBlockCommentAutomaton.cpp
-UnclosedBlockCommentAutomaton.h
-C:/Users/Helaman/CLionProjects/CS236_Project1/UnclosedBlockCommentAutomaton.h
-
 C:/Users/Helaman/CLionProjects/CS236_Project1/UnclosedBlockCommentAutomaton.h
 Automaton.h
 C:/Users/Helaman/CLionProjects/CS236_Project1/Automaton.h
 
-C:/Users/Helaman/CLionProjects/CS236_Project1/UnclosedStringAutomaton.cpp
-UnclosedStringAutomaton.h
-C:/Users/Helaman/CLionProjects/CS236_Project1/UnclosedStringAutomaton.h
-
 C:/Users/Helaman/CLionProjects/CS236_Project1/UnclosedStringAutomaton.h
 Automaton.h
 C:/Users/Helaman/CLionProjects/CS236_Project1/Automaton.h
-
-C:/Users/Helaman/CLionProjects/CS236_Project1/main.cpp
-Lexer.h
-C:/Users/Helaman/CLionProjects/CS236_Project1/Lexer.h
-iostream
--
-fstream
--
-Token.h
-C:/Users/Helaman/CLionProjects/CS236_Project1/Token.h
 
