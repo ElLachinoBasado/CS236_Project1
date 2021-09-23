@@ -44,6 +44,7 @@ void UnclosedBlockCommentAutomaton::S2 (const std::string& input) {
 void UnclosedBlockCommentAutomaton::S3 (const std::string& input) {
     if (index < input.size()) {
         if (input[index] != '#') {
+            if (input[index] == '\n') newLines++;
             inputRead++;
             index++;
             S2(input);
