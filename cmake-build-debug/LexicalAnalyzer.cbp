@@ -105,6 +105,12 @@
 		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/ColonDashAutomaton.h">
 			<Option target="CS236_Project1"/>
 		</Unit>
+		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/DatalogProgram.cpp">
+			<Option target="CS236_Project1"/>
+		</Unit>
+		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/DatalogProgram.h">
+			<Option target="CS236_Project1"/>
+		</Unit>
 		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/FactsAutomaton.cpp">
 			<Option target="CS236_Project1"/>
 		</Unit>
@@ -135,10 +141,34 @@
 		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/MatcherAutomaton.h">
 			<Option target="CS236_Project1"/>
 		</Unit>
+		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/Parameter.cpp">
+			<Option target="CS236_Project1"/>
+		</Unit>
+		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/Parameter.h">
+			<Option target="CS236_Project1"/>
+		</Unit>
+		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/Parser.cpp">
+			<Option target="CS236_Project1"/>
+		</Unit>
+		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/Parser.h">
+			<Option target="CS236_Project1"/>
+		</Unit>
+		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/Predicate.cpp">
+			<Option target="CS236_Project1"/>
+		</Unit>
+		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/Predicate.h">
+			<Option target="CS236_Project1"/>
+		</Unit>
 		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/QueriesAutomaton.cpp">
 			<Option target="CS236_Project1"/>
 		</Unit>
 		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/QueriesAutomaton.h">
+			<Option target="CS236_Project1"/>
+		</Unit>
+		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/Rule.cpp">
+			<Option target="CS236_Project1"/>
+		</Unit>
+		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/Rule.h">
 			<Option target="CS236_Project1"/>
 		</Unit>
 		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/RulesAutomaton.cpp">
