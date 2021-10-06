@@ -49,4 +49,5 @@ void DatalogProgram::print() {
     for (string s : domain) {
         cout << "  " << s << endl;
     }
+    cout << endl;
 }
