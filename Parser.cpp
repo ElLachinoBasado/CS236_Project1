@@ -10,11 +10,10 @@ Parser::Parser(vector<Token*> input) {
     i = 0;
     program = new DatalogProgram();
     for (unsigned int i = 0; i < input.size(); i++) { //clears comment tokens
-        if (input.at(i)->getType() == "COMMENT") {
-            input.erase(input.begin()+i);
+        if (input.at(i)->getType() != "COMMENT") {
+            tokens.push_back(input.at(i));
         }
     }
-    tokens = input;
 }
 
 void Parser::parse() {
