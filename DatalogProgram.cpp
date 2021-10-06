@@ -43,7 +43,7 @@ void DatalogProgram::print() {
     }
     cout << "Queries(" << to_string(queries.size()) << "):" << endl;
     for (unsigned int i = 0; i < queries.size(); i++) {
-        cout << "  "  << queries.at(i)->toString() << endl;
+        cout << "  "  << queries.at(i)->toString() << "?" << endl;
     }
     cout << "Domain(" << to_string(domain.size()) << "):" << endl;
     for (string s : domain) {
