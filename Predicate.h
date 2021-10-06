@@ -12,10 +12,10 @@ using namespace std;
 class Predicate {
 private:
     string name;
-    vector<Parameter> parameterList;
+    vector<Parameter*> parameterList;
 public:
     Predicate() {};
-    Predicate(string id, vector<Parameter> list);
+    Predicate(string id, vector<Parameter*> list);
     string toString();
 };
 

@@ -34,6 +34,8 @@ public:
     Token(TokenType type, std::string description, int line);
     string toString();
     string tokenToString(TokenType token);
+    string getType();
+    string getValue();
 };
 
 #endif // TOKEN_H

@@ -38,8 +38,6 @@ void Lexer::CreateAutomata() {
     automata.push_back(new StringAutomaton());
     automata.push_back(new UnclosedBlockCommentAutomaton());
     automata.push_back(new BlockCommentAutomaton());
-
-    // TODO: Add the other needed automata here
 }
 
 void Lexer::Run(std::string& input) {

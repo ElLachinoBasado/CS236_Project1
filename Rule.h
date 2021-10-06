@@ -10,10 +10,10 @@
 #include "Predicate.h"
 class Rule {
 private:
-    Predicate headPredicate = Predicate();
-    vector<Predicate> predicateList;
+    Predicate* headPredicate;
+    vector<Predicate*> predicateList;
 public:
-    Rule(Predicate head, vector<Predicate> list);
+    Rule(Predicate* head, vector<Predicate*> list);
     string toString();
 };
 

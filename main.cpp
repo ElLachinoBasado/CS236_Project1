@@ -1,4 +1,5 @@
 #include "Lexer.h"
+#include "Parser.h"
 #include <iostream>
 #include <fstream>
 #include "Token.h"
@@ -25,15 +26,17 @@ int main(int argc, char** argv) {
     Lexer* lexer = new Lexer();
     lexer->Run(inputResult);
 
-    //TODO: retrieve and print Tokens
     vector<Token*> allTokens = lexer->getTokens();
-    for (long unsigned int i = 0; i < allTokens.size(); i++) {
-        cout << allTokens.at(i)->toString() << endl;
+
+    Parser* parser = new Parser(allTokens);
+    try {
+        parser->parse();
+    } catch (Token* token) {
+        cout << "Failure!" << endl << token->toString();
     }
 
-    cout << "Total Tokens = " << allTokens.size() << endl;
-
-    //deletes Lexer
+    //deletes stuff
     delete lexer;
+    delete parser;
     return 0;
 }

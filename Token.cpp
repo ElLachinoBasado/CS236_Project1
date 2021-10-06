@@ -35,3 +35,10 @@ string Token::toString() {
     return "(" + tokenToString(thisType) + ",\"" + value + "\"," + to_string(lineNumber) + ")";
 }
 
+string Token::getValue() {
+    return value;
+}
+
+string Token::getType() {
+    return tokenToString(thisType);
+}
