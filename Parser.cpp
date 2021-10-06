@@ -36,6 +36,9 @@ void Parser::parse() {
     query();
     queryList();
 
+    if (tokens.at(i)->getType() == "EOF") i++;
+    else throw tokens.at(i);
+
     program->print();
 }
 
