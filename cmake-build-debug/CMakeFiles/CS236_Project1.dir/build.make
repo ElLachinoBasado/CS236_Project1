@@ -454,6 +454,101 @@ CMakeFiles\CS236_Project1.dir\Rule.cpp.s: cmake_force
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\CS236_Project1.dir\Rule.cpp.s /c C:\Users\Helaman\CLionProjects\CS236_Project1\Rule.cpp
 <<
 
+CMakeFiles\CS236_Project1.dir\Tuple.cpp.obj: CMakeFiles\CS236_Project1.dir\flags.make
+CMakeFiles\CS236_Project1.dir\Tuple.cpp.obj: ..\Tuple.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Helaman\CLionProjects\CS236_Project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/CS236_Project1.dir/Tuple.cpp.obj"
+	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\CS236_Project1.dir\Tuple.cpp.obj /FdCMakeFiles\CS236_Project1.dir\ /FS -c C:\Users\Helaman\CLionProjects\CS236_Project1\Tuple.cpp
+<<
+
+CMakeFiles\CS236_Project1.dir\Tuple.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CS236_Project1.dir/Tuple.cpp.i"
+	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\cl.exe > CMakeFiles\CS236_Project1.dir\Tuple.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Helaman\CLionProjects\CS236_Project1\Tuple.cpp
+<<
+
+CMakeFiles\CS236_Project1.dir\Tuple.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CS236_Project1.dir/Tuple.cpp.s"
+	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\CS236_Project1.dir\Tuple.cpp.s /c C:\Users\Helaman\CLionProjects\CS236_Project1\Tuple.cpp
+<<
+
+CMakeFiles\CS236_Project1.dir\Header.cpp.obj: CMakeFiles\CS236_Project1.dir\flags.make
+CMakeFiles\CS236_Project1.dir\Header.cpp.obj: ..\Header.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Helaman\CLionProjects\CS236_Project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/CS236_Project1.dir/Header.cpp.obj"
+	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\CS236_Project1.dir\Header.cpp.obj /FdCMakeFiles\CS236_Project1.dir\ /FS -c C:\Users\Helaman\CLionProjects\CS236_Project1\Header.cpp
+<<
+
+CMakeFiles\CS236_Project1.dir\Header.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CS236_Project1.dir/Header.cpp.i"
+	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\cl.exe > CMakeFiles\CS236_Project1.dir\Header.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Helaman\CLionProjects\CS236_Project1\Header.cpp
+<<
+
+CMakeFiles\CS236_Project1.dir\Header.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CS236_Project1.dir/Header.cpp.s"
+	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\CS236_Project1.dir\Header.cpp.s /c C:\Users\Helaman\CLionProjects\CS236_Project1\Header.cpp
+<<
+
+CMakeFiles\CS236_Project1.dir\Relation.cpp.obj: CMakeFiles\CS236_Project1.dir\flags.make
+CMakeFiles\CS236_Project1.dir\Relation.cpp.obj: ..\Relation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Helaman\CLionProjects\CS236_Project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/CS236_Project1.dir/Relation.cpp.obj"
+	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\CS236_Project1.dir\Relation.cpp.obj /FdCMakeFiles\CS236_Project1.dir\ /FS -c C:\Users\Helaman\CLionProjects\CS236_Project1\Relation.cpp
+<<
+
+CMakeFiles\CS236_Project1.dir\Relation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CS236_Project1.dir/Relation.cpp.i"
+	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\cl.exe > CMakeFiles\CS236_Project1.dir\Relation.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Helaman\CLionProjects\CS236_Project1\Relation.cpp
+<<
+
+CMakeFiles\CS236_Project1.dir\Relation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CS236_Project1.dir/Relation.cpp.s"
+	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\CS236_Project1.dir\Relation.cpp.s /c C:\Users\Helaman\CLionProjects\CS236_Project1\Relation.cpp
+<<
+
+CMakeFiles\CS236_Project1.dir\Database.cpp.obj: CMakeFiles\CS236_Project1.dir\flags.make
+CMakeFiles\CS236_Project1.dir\Database.cpp.obj: ..\Database.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Helaman\CLionProjects\CS236_Project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/CS236_Project1.dir/Database.cpp.obj"
+	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\CS236_Project1.dir\Database.cpp.obj /FdCMakeFiles\CS236_Project1.dir\ /FS -c C:\Users\Helaman\CLionProjects\CS236_Project1\Database.cpp
+<<
+
+CMakeFiles\CS236_Project1.dir\Database.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CS236_Project1.dir/Database.cpp.i"
+	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\cl.exe > CMakeFiles\CS236_Project1.dir\Database.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Helaman\CLionProjects\CS236_Project1\Database.cpp
+<<
+
+CMakeFiles\CS236_Project1.dir\Database.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CS236_Project1.dir/Database.cpp.s"
+	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\CS236_Project1.dir\Database.cpp.s /c C:\Users\Helaman\CLionProjects\CS236_Project1\Database.cpp
+<<
+
+CMakeFiles\CS236_Project1.dir\Interpreter.cpp.obj: CMakeFiles\CS236_Project1.dir\flags.make
+CMakeFiles\CS236_Project1.dir\Interpreter.cpp.obj: ..\Interpreter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Helaman\CLionProjects\CS236_Project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/CS236_Project1.dir/Interpreter.cpp.obj"
+	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\CS236_Project1.dir\Interpreter.cpp.obj /FdCMakeFiles\CS236_Project1.dir\ /FS -c C:\Users\Helaman\CLionProjects\CS236_Project1\Interpreter.cpp
+<<
+
+CMakeFiles\CS236_Project1.dir\Interpreter.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CS236_Project1.dir/Interpreter.cpp.i"
+	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\cl.exe > CMakeFiles\CS236_Project1.dir\Interpreter.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Helaman\CLionProjects\CS236_Project1\Interpreter.cpp
+<<
+
+CMakeFiles\CS236_Project1.dir\Interpreter.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CS236_Project1.dir/Interpreter.cpp.s"
+	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\CS236_Project1.dir\Interpreter.cpp.s /c C:\Users\Helaman\CLionProjects\CS236_Project1\Interpreter.cpp
+<<
+
 # Object files for target CS236_Project1
 CS236_Project1_OBJECTS = \
 "CMakeFiles\CS236_Project1.dir\ColonAutomaton.cpp.obj" \
@@ -476,7 +571,12 @@ CS236_Project1_OBJECTS = \
 "CMakeFiles\CS236_Project1.dir\DatalogProgram.cpp.obj" \
 "CMakeFiles\CS236_Project1.dir\Parameter.cpp.obj" \
 "CMakeFiles\CS236_Project1.dir\Predicate.cpp.obj" \
-"CMakeFiles\CS236_Project1.dir\Rule.cpp.obj"
+"CMakeFiles\CS236_Project1.dir\Rule.cpp.obj" \
+"CMakeFiles\CS236_Project1.dir\Tuple.cpp.obj" \
+"CMakeFiles\CS236_Project1.dir\Header.cpp.obj" \
+"CMakeFiles\CS236_Project1.dir\Relation.cpp.obj" \
+"CMakeFiles\CS236_Project1.dir\Database.cpp.obj" \
+"CMakeFiles\CS236_Project1.dir\Interpreter.cpp.obj"
 
 # External object files for target CS236_Project1
 CS236_Project1_EXTERNAL_OBJECTS =
@@ -502,9 +602,14 @@ CS236_Project1.exe: CMakeFiles\CS236_Project1.dir\DatalogProgram.cpp.obj
 CS236_Project1.exe: CMakeFiles\CS236_Project1.dir\Parameter.cpp.obj
 CS236_Project1.exe: CMakeFiles\CS236_Project1.dir\Predicate.cpp.obj
 CS236_Project1.exe: CMakeFiles\CS236_Project1.dir\Rule.cpp.obj
+CS236_Project1.exe: CMakeFiles\CS236_Project1.dir\Tuple.cpp.obj
+CS236_Project1.exe: CMakeFiles\CS236_Project1.dir\Header.cpp.obj
+CS236_Project1.exe: CMakeFiles\CS236_Project1.dir\Relation.cpp.obj
+CS236_Project1.exe: CMakeFiles\CS236_Project1.dir\Database.cpp.obj
+CS236_Project1.exe: CMakeFiles\CS236_Project1.dir\Interpreter.cpp.obj
 CS236_Project1.exe: CMakeFiles\CS236_Project1.dir\build.make
 CS236_Project1.exe: CMakeFiles\CS236_Project1.dir\objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Helaman\CLionProjects\CS236_Project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Linking CXX executable CS236_Project1.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Helaman\CLionProjects\CS236_Project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Linking CXX executable CS236_Project1.exe"
 	"C:\Program Files\JetBrains\CLion 2021.2.1\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\CS236_Project1.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100190~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100190~1.0\x86\mt.exe --manifests -- C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\CS236_Project1.dir\objects1.rsp @<<
  /out:CS236_Project1.exe /implib:CS236_Project1.lib /pdb:C:\Users\Helaman\CLionProjects\CS236_Project1\cmake-build-debug\CS236_Project1.pdb /version:0.0 /machine:X86 /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
 <<

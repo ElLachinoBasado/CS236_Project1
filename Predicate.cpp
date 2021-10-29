@@ -18,3 +18,10 @@ string Predicate::toString() {
     result = result + ')';
     return result;
 }
+
+string Predicate::getName() {
+    return name;
+}
+vector<Parameter*> Predicate::getParameterList() {
+    return parameterList;
+}

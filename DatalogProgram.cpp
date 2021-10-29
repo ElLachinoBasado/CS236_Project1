@@ -4,7 +4,7 @@
 
 #include "DatalogProgram.h"
 DatalogProgram::DatalogProgram() {
-
+    database = new Database();
 }
 
 void DatalogProgram::addSchemes(Predicate* &toAdd) {
@@ -48,5 +48,42 @@ void DatalogProgram::print() {
     cout << "Domain(" << to_string(domain.size()) << "):" << endl;
     for (string s : domain) {
         cout << "  " << s << endl;
+    }
+}
+
+Database * DatalogProgram::getDatabase() {
+    return database;
+}
+
+void DatalogProgram::createDatabase() {
+
+    for (unsigned int i = 0; i < schemes.size(); i++) {
+        //get relation name
+        string relationName = schemes.at(i)->getName();
+
+        //get header
+        vector<Parameter*> parameterHeaderList = schemes.at(i)->getParameterList();
+        vector<string> stringHeaderList;
+        for (unsigned int j = 0; j < parameterHeaderList.size(); j++) {
+            stringHeaderList.push_back(parameterHeaderList.at(j)->getValue());
+        }
+        Header * relationHeader = new Header(stringHeaderList);
+
+        //construct relation
+        Relation * newRelation = new Relation(relationName, relationHeader);
+
+        //get tuples
+        for (unsigned int j = 0; j < facts.size(); j++) {
+            if (facts.at(j)->getName() == relationName) {
+                vector<Parameter*> parameterTupleList = facts.at(j)->getParameterList();
+                vector<string> stringTupleList;
+                for (unsigned int k = 0; k < parameterTupleList.size(); k++) {
+                    stringTupleList.push_back(parameterTupleList.at(k)->getValue());
+                }
+                Tuple newTuple = Tuple(stringTupleList);
+                newRelation->addTuple(newTuple);
+            }
+        }
+        database->addRelation(relationName, newRelation);
     }
 }

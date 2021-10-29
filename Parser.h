@@ -21,6 +21,7 @@ private:
 public:
     Parser(vector<Token*> input);
     void parse();
+    DatalogProgram* getProgram();
 
     void predicateList(vector<Predicate*> &list);
     void parameterList(vector<Parameter*> &list);

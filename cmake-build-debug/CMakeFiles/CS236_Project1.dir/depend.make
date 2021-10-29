@@ -16,21 +16,45 @@ CMakeFiles\CS236_Project1.dir\ColonDashAutomaton.cpp.obj: ..\ColonDashAutomaton.
 CMakeFiles\CS236_Project1.dir\ColonDashAutomaton.cpp.obj: ..\ColonDashAutomaton.h
 CMakeFiles\CS236_Project1.dir\ColonDashAutomaton.cpp.obj: ..\Token.h
 
+CMakeFiles\CS236_Project1.dir\Database.cpp.obj: ..\Database.cpp
+CMakeFiles\CS236_Project1.dir\Database.cpp.obj: ..\Database.h
+CMakeFiles\CS236_Project1.dir\Database.cpp.obj: ..\Header.h
+CMakeFiles\CS236_Project1.dir\Database.cpp.obj: ..\Relation.h
+CMakeFiles\CS236_Project1.dir\Database.cpp.obj: ..\Tuple.h
+
+CMakeFiles\CS236_Project1.dir\DatalogProgram.cpp.obj: ..\Database.h
 CMakeFiles\CS236_Project1.dir\DatalogProgram.cpp.obj: ..\DatalogProgram.cpp
 CMakeFiles\CS236_Project1.dir\DatalogProgram.cpp.obj: ..\DatalogProgram.h
+CMakeFiles\CS236_Project1.dir\DatalogProgram.cpp.obj: ..\Header.h
 CMakeFiles\CS236_Project1.dir\DatalogProgram.cpp.obj: ..\Parameter.h
 CMakeFiles\CS236_Project1.dir\DatalogProgram.cpp.obj: ..\Predicate.h
+CMakeFiles\CS236_Project1.dir\DatalogProgram.cpp.obj: ..\Relation.h
 CMakeFiles\CS236_Project1.dir\DatalogProgram.cpp.obj: ..\Rule.h
+CMakeFiles\CS236_Project1.dir\DatalogProgram.cpp.obj: ..\Tuple.h
 
 CMakeFiles\CS236_Project1.dir\FactsAutomaton.cpp.obj: ..\Automaton.h
 CMakeFiles\CS236_Project1.dir\FactsAutomaton.cpp.obj: ..\FactsAutomaton.cpp
 CMakeFiles\CS236_Project1.dir\FactsAutomaton.cpp.obj: ..\FactsAutomaton.h
 CMakeFiles\CS236_Project1.dir\FactsAutomaton.cpp.obj: ..\Token.h
 
+CMakeFiles\CS236_Project1.dir\Header.cpp.obj: ..\Header.cpp
+CMakeFiles\CS236_Project1.dir\Header.cpp.obj: ..\Header.h
+
 CMakeFiles\CS236_Project1.dir\IdAutomaton.cpp.obj: ..\Automaton.h
 CMakeFiles\CS236_Project1.dir\IdAutomaton.cpp.obj: ..\IdAutomaton.cpp
 CMakeFiles\CS236_Project1.dir\IdAutomaton.cpp.obj: ..\IdAutomaton.h
 CMakeFiles\CS236_Project1.dir\IdAutomaton.cpp.obj: ..\Token.h
+
+CMakeFiles\CS236_Project1.dir\Interpreter.cpp.obj: ..\Database.h
+CMakeFiles\CS236_Project1.dir\Interpreter.cpp.obj: ..\DatalogProgram.h
+CMakeFiles\CS236_Project1.dir\Interpreter.cpp.obj: ..\Header.h
+CMakeFiles\CS236_Project1.dir\Interpreter.cpp.obj: ..\Interpreter.cpp
+CMakeFiles\CS236_Project1.dir\Interpreter.cpp.obj: ..\Interpreter.h
+CMakeFiles\CS236_Project1.dir\Interpreter.cpp.obj: ..\Parameter.h
+CMakeFiles\CS236_Project1.dir\Interpreter.cpp.obj: ..\Predicate.h
+CMakeFiles\CS236_Project1.dir\Interpreter.cpp.obj: ..\Relation.h
+CMakeFiles\CS236_Project1.dir\Interpreter.cpp.obj: ..\Rule.h
+CMakeFiles\CS236_Project1.dir\Interpreter.cpp.obj: ..\Tuple.h
 
 CMakeFiles\CS236_Project1.dir\Lexer.cpp.obj: ..\Automaton.h
 CMakeFiles\CS236_Project1.dir\Lexer.cpp.obj: ..\BlockCommentAutomaton.h
@@ -62,13 +86,17 @@ CMakeFiles\CS236_Project1.dir\MatcherAutomaton.cpp.obj: ..\Token.h
 CMakeFiles\CS236_Project1.dir\Parameter.cpp.obj: ..\Parameter.cpp
 CMakeFiles\CS236_Project1.dir\Parameter.cpp.obj: ..\Parameter.h
 
+CMakeFiles\CS236_Project1.dir\Parser.cpp.obj: ..\Database.h
 CMakeFiles\CS236_Project1.dir\Parser.cpp.obj: ..\DatalogProgram.h
+CMakeFiles\CS236_Project1.dir\Parser.cpp.obj: ..\Header.h
 CMakeFiles\CS236_Project1.dir\Parser.cpp.obj: ..\Parameter.h
 CMakeFiles\CS236_Project1.dir\Parser.cpp.obj: ..\Parser.cpp
 CMakeFiles\CS236_Project1.dir\Parser.cpp.obj: ..\Parser.h
 CMakeFiles\CS236_Project1.dir\Parser.cpp.obj: ..\Predicate.h
+CMakeFiles\CS236_Project1.dir\Parser.cpp.obj: ..\Relation.h
 CMakeFiles\CS236_Project1.dir\Parser.cpp.obj: ..\Rule.h
 CMakeFiles\CS236_Project1.dir\Parser.cpp.obj: ..\Token.h
+CMakeFiles\CS236_Project1.dir\Parser.cpp.obj: ..\Tuple.h
 
 CMakeFiles\CS236_Project1.dir\Predicate.cpp.obj: ..\Parameter.h
 CMakeFiles\CS236_Project1.dir\Predicate.cpp.obj: ..\Predicate.cpp
@@ -78,6 +106,11 @@ CMakeFiles\CS236_Project1.dir\QueriesAutomaton.cpp.obj: ..\Automaton.h
 CMakeFiles\CS236_Project1.dir\QueriesAutomaton.cpp.obj: ..\QueriesAutomaton.cpp
 CMakeFiles\CS236_Project1.dir\QueriesAutomaton.cpp.obj: ..\QueriesAutomaton.h
 CMakeFiles\CS236_Project1.dir\QueriesAutomaton.cpp.obj: ..\Token.h
+
+CMakeFiles\CS236_Project1.dir\Relation.cpp.obj: ..\Header.h
+CMakeFiles\CS236_Project1.dir\Relation.cpp.obj: ..\Relation.cpp
+CMakeFiles\CS236_Project1.dir\Relation.cpp.obj: ..\Relation.h
+CMakeFiles\CS236_Project1.dir\Relation.cpp.obj: ..\Tuple.h
 
 CMakeFiles\CS236_Project1.dir\Rule.cpp.obj: ..\Parameter.h
 CMakeFiles\CS236_Project1.dir\Rule.cpp.obj: ..\Predicate.h
@@ -102,6 +135,9 @@ CMakeFiles\CS236_Project1.dir\StringAutomaton.cpp.obj: ..\Token.h
 CMakeFiles\CS236_Project1.dir\Token.cpp.obj: ..\Token.cpp
 CMakeFiles\CS236_Project1.dir\Token.cpp.obj: ..\Token.h
 
+CMakeFiles\CS236_Project1.dir\Tuple.cpp.obj: ..\Tuple.cpp
+CMakeFiles\CS236_Project1.dir\Tuple.cpp.obj: ..\Tuple.h
+
 CMakeFiles\CS236_Project1.dir\UnclosedBlockCommentAutomaton.cpp.obj: ..\Automaton.h
 CMakeFiles\CS236_Project1.dir\UnclosedBlockCommentAutomaton.cpp.obj: ..\Token.h
 CMakeFiles\CS236_Project1.dir\UnclosedBlockCommentAutomaton.cpp.obj: ..\UnclosedBlockCommentAutomaton.cpp
@@ -113,12 +149,16 @@ CMakeFiles\CS236_Project1.dir\UnclosedStringAutomaton.cpp.obj: ..\UnclosedString
 CMakeFiles\CS236_Project1.dir\UnclosedStringAutomaton.cpp.obj: ..\UnclosedStringAutomaton.h
 
 CMakeFiles\CS236_Project1.dir\main.cpp.obj: ..\Automaton.h
+CMakeFiles\CS236_Project1.dir\main.cpp.obj: ..\Database.h
 CMakeFiles\CS236_Project1.dir\main.cpp.obj: ..\DatalogProgram.h
+CMakeFiles\CS236_Project1.dir\main.cpp.obj: ..\Header.h
 CMakeFiles\CS236_Project1.dir\main.cpp.obj: ..\Lexer.h
 CMakeFiles\CS236_Project1.dir\main.cpp.obj: ..\Parameter.h
 CMakeFiles\CS236_Project1.dir\main.cpp.obj: ..\Parser.h
 CMakeFiles\CS236_Project1.dir\main.cpp.obj: ..\Predicate.h
+CMakeFiles\CS236_Project1.dir\main.cpp.obj: ..\Relation.h
 CMakeFiles\CS236_Project1.dir\main.cpp.obj: ..\Rule.h
 CMakeFiles\CS236_Project1.dir\main.cpp.obj: ..\Token.h
+CMakeFiles\CS236_Project1.dir\main.cpp.obj: ..\Tuple.h
 CMakeFiles\CS236_Project1.dir\main.cpp.obj: ..\main.cpp
 

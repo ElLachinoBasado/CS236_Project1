@@ -6,6 +6,8 @@
 #include <iostream>
 #include <set>
 
+#include "Database.h"
+#include "Header.h"
 using namespace std;
 
 class DatalogProgram {
@@ -15,6 +17,7 @@ private:
     vector<Rule*> rules;
     vector<Predicate*> queries;
     set<string> domain;
+    Database * database;
 public:
     DatalogProgram();
     void addSchemes(Predicate* &toAdd);
@@ -23,6 +26,9 @@ public:
     void addQueries(Predicate* &toAdd);
     void addDomain(Parameter* &toAdd);
     void print();
+
+    Database * getDatabase();
+    void createDatabase();
 };
 
 

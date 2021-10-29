@@ -38,8 +38,13 @@ void Parser::parse() {
     if (tokens.at(i)->getType() == "EOF") i++;
     else throw tokens.at(i);
 
-    program->print();
+    //program->print();
 }
+
+DatalogProgram* Parser::getProgram() {
+    return program;
+}
+
 
 void Parser::schemeList() {
     if (tokens.at(i)->getType() == "ID") {

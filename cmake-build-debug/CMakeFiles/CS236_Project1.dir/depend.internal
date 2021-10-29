@@ -16,22 +16,46 @@ CMakeFiles/CS236_Project1.dir/ColonDashAutomaton.cpp.obj
  C:/Users/Helaman/CLionProjects/CS236_Project1/ColonDashAutomaton.cpp
  C:/Users/Helaman/CLionProjects/CS236_Project1/ColonDashAutomaton.h
  C:/Users/Helaman/CLionProjects/CS236_Project1/Token.h
+CMakeFiles/CS236_Project1.dir/Database.cpp.obj
+ C:/Users/Helaman/CLionProjects/CS236_Project1/Database.cpp
+ C:/Users/Helaman/CLionProjects/CS236_Project1/Database.h
+ C:/Users/Helaman/CLionProjects/CS236_Project1/Header.h
+ C:/Users/Helaman/CLionProjects/CS236_Project1/Relation.h
+ C:/Users/Helaman/CLionProjects/CS236_Project1/Tuple.h
 CMakeFiles/CS236_Project1.dir/DatalogProgram.cpp.obj
+ C:/Users/Helaman/CLionProjects/CS236_Project1/Database.h
  C:/Users/Helaman/CLionProjects/CS236_Project1/DatalogProgram.cpp
  C:/Users/Helaman/CLionProjects/CS236_Project1/DatalogProgram.h
+ C:/Users/Helaman/CLionProjects/CS236_Project1/Header.h
  C:/Users/Helaman/CLionProjects/CS236_Project1/Parameter.h
  C:/Users/Helaman/CLionProjects/CS236_Project1/Predicate.h
+ C:/Users/Helaman/CLionProjects/CS236_Project1/Relation.h
  C:/Users/Helaman/CLionProjects/CS236_Project1/Rule.h
+ C:/Users/Helaman/CLionProjects/CS236_Project1/Tuple.h
 CMakeFiles/CS236_Project1.dir/FactsAutomaton.cpp.obj
  C:/Users/Helaman/CLionProjects/CS236_Project1/Automaton.h
  C:/Users/Helaman/CLionProjects/CS236_Project1/FactsAutomaton.cpp
  C:/Users/Helaman/CLionProjects/CS236_Project1/FactsAutomaton.h
  C:/Users/Helaman/CLionProjects/CS236_Project1/Token.h
+CMakeFiles/CS236_Project1.dir/Header.cpp.obj
+ C:/Users/Helaman/CLionProjects/CS236_Project1/Header.cpp
+ C:/Users/Helaman/CLionProjects/CS236_Project1/Header.h
 CMakeFiles/CS236_Project1.dir/IdAutomaton.cpp.obj
  C:/Users/Helaman/CLionProjects/CS236_Project1/Automaton.h
  C:/Users/Helaman/CLionProjects/CS236_Project1/IdAutomaton.cpp
  C:/Users/Helaman/CLionProjects/CS236_Project1/IdAutomaton.h
  C:/Users/Helaman/CLionProjects/CS236_Project1/Token.h
+CMakeFiles/CS236_Project1.dir/Interpreter.cpp.obj
+ C:/Users/Helaman/CLionProjects/CS236_Project1/Database.h
+ C:/Users/Helaman/CLionProjects/CS236_Project1/DatalogProgram.h
+ C:/Users/Helaman/CLionProjects/CS236_Project1/Header.h
+ C:/Users/Helaman/CLionProjects/CS236_Project1/Interpreter.cpp
+ C:/Users/Helaman/CLionProjects/CS236_Project1/Interpreter.h
+ C:/Users/Helaman/CLionProjects/CS236_Project1/Parameter.h
+ C:/Users/Helaman/CLionProjects/CS236_Project1/Predicate.h
+ C:/Users/Helaman/CLionProjects/CS236_Project1/Relation.h
+ C:/Users/Helaman/CLionProjects/CS236_Project1/Rule.h
+ C:/Users/Helaman/CLionProjects/CS236_Project1/Tuple.h
 CMakeFiles/CS236_Project1.dir/Lexer.cpp.obj
  C:/Users/Helaman/CLionProjects/CS236_Project1/Automaton.h
  C:/Users/Helaman/CLionProjects/CS236_Project1/BlockCommentAutomaton.h
@@ -63,13 +87,17 @@ CMakeFiles/CS236_Project1.dir/Parameter.cpp.obj
  C:/Users/Helaman/CLionProjects/CS236_Project1/Parameter.cpp
  C:/Users/Helaman/CLionProjects/CS236_Project1/Parameter.h
 CMakeFiles/CS236_Project1.dir/Parser.cpp.obj
+ C:/Users/Helaman/CLionProjects/CS236_Project1/Database.h
  C:/Users/Helaman/CLionProjects/CS236_Project1/DatalogProgram.h
+ C:/Users/Helaman/CLionProjects/CS236_Project1/Header.h
  C:/Users/Helaman/CLionProjects/CS236_Project1/Parameter.h
  C:/Users/Helaman/CLionProjects/CS236_Project1/Parser.cpp
  C:/Users/Helaman/CLionProjects/CS236_Project1/Parser.h
  C:/Users/Helaman/CLionProjects/CS236_Project1/Predicate.h
+ C:/Users/Helaman/CLionProjects/CS236_Project1/Relation.h
  C:/Users/Helaman/CLionProjects/CS236_Project1/Rule.h
  C:/Users/Helaman/CLionProjects/CS236_Project1/Token.h
+ C:/Users/Helaman/CLionProjects/CS236_Project1/Tuple.h
 CMakeFiles/CS236_Project1.dir/Predicate.cpp.obj
  C:/Users/Helaman/CLionProjects/CS236_Project1/Parameter.h
  C:/Users/Helaman/CLionProjects/CS236_Project1/Predicate.cpp
@@ -79,6 +107,11 @@ CMakeFiles/CS236_Project1.dir/QueriesAutomaton.cpp.obj
  C:/Users/Helaman/CLionProjects/CS236_Project1/QueriesAutomaton.cpp
  C:/Users/Helaman/CLionProjects/CS236_Project1/QueriesAutomaton.h
  C:/Users/Helaman/CLionProjects/CS236_Project1/Token.h
+CMakeFiles/CS236_Project1.dir/Relation.cpp.obj
+ C:/Users/Helaman/CLionProjects/CS236_Project1/Header.h
+ C:/Users/Helaman/CLionProjects/CS236_Project1/Relation.cpp
+ C:/Users/Helaman/CLionProjects/CS236_Project1/Relation.h
+ C:/Users/Helaman/CLionProjects/CS236_Project1/Tuple.h
 CMakeFiles/CS236_Project1.dir/Rule.cpp.obj
  C:/Users/Helaman/CLionProjects/CS236_Project1/Parameter.h
  C:/Users/Helaman/CLionProjects/CS236_Project1/Predicate.h
@@ -102,6 +135,9 @@ CMakeFiles/CS236_Project1.dir/StringAutomaton.cpp.obj
 CMakeFiles/CS236_Project1.dir/Token.cpp.obj
  C:/Users/Helaman/CLionProjects/CS236_Project1/Token.cpp
  C:/Users/Helaman/CLionProjects/CS236_Project1/Token.h
+CMakeFiles/CS236_Project1.dir/Tuple.cpp.obj
+ C:/Users/Helaman/CLionProjects/CS236_Project1/Tuple.cpp
+ C:/Users/Helaman/CLionProjects/CS236_Project1/Tuple.h
 CMakeFiles/CS236_Project1.dir/UnclosedBlockCommentAutomaton.cpp.obj
  C:/Users/Helaman/CLionProjects/CS236_Project1/Automaton.h
  C:/Users/Helaman/CLionProjects/CS236_Project1/Token.h
@@ -114,11 +150,15 @@ CMakeFiles/CS236_Project1.dir/UnclosedStringAutomaton.cpp.obj
  C:/Users/Helaman/CLionProjects/CS236_Project1/UnclosedStringAutomaton.h
 CMakeFiles/CS236_Project1.dir/main.cpp.obj
  C:/Users/Helaman/CLionProjects/CS236_Project1/Automaton.h
+ C:/Users/Helaman/CLionProjects/CS236_Project1/Database.h
  C:/Users/Helaman/CLionProjects/CS236_Project1/DatalogProgram.h
+ C:/Users/Helaman/CLionProjects/CS236_Project1/Header.h
  C:/Users/Helaman/CLionProjects/CS236_Project1/Lexer.h
  C:/Users/Helaman/CLionProjects/CS236_Project1/Parameter.h
  C:/Users/Helaman/CLionProjects/CS236_Project1/Parser.h
  C:/Users/Helaman/CLionProjects/CS236_Project1/Predicate.h
+ C:/Users/Helaman/CLionProjects/CS236_Project1/Relation.h
  C:/Users/Helaman/CLionProjects/CS236_Project1/Rule.h
  C:/Users/Helaman/CLionProjects/CS236_Project1/Token.h
+ C:/Users/Helaman/CLionProjects/CS236_Project1/Tuple.h
  C:/Users/Helaman/CLionProjects/CS236_Project1/main.cpp

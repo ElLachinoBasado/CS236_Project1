@@ -17,6 +17,8 @@ public:
     Predicate() {};
     Predicate(string id, vector<Parameter*> list);
     string toString();
+    string getName();
+    vector<Parameter*> getParameterList();
 };
 
 

@@ -105,6 +105,12 @@
 		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/ColonDashAutomaton.h">
 			<Option target="CS236_Project1"/>
 		</Unit>
+		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/Database.cpp">
+			<Option target="CS236_Project1"/>
+		</Unit>
+		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/Database.h">
+			<Option target="CS236_Project1"/>
+		</Unit>
 		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/DatalogProgram.cpp">
 			<Option target="CS236_Project1"/>
 		</Unit>
@@ -117,10 +123,22 @@
 		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/FactsAutomaton.h">
 			<Option target="CS236_Project1"/>
 		</Unit>
+		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/Header.cpp">
+			<Option target="CS236_Project1"/>
+		</Unit>
+		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/Header.h">
+			<Option target="CS236_Project1"/>
+		</Unit>
 		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/IdAutomaton.cpp">
 			<Option target="CS236_Project1"/>
 		</Unit>
 		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/IdAutomaton.h">
+			<Option target="CS236_Project1"/>
+		</Unit>
+		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/Interpreter.cpp">
+			<Option target="CS236_Project1"/>
+		</Unit>
+		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/Interpreter.h">
 			<Option target="CS236_Project1"/>
 		</Unit>
 		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/Lexer.cpp">
@@ -165,6 +183,12 @@
 		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/QueriesAutomaton.h">
 			<Option target="CS236_Project1"/>
 		</Unit>
+		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/Relation.cpp">
+			<Option target="CS236_Project1"/>
+		</Unit>
+		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/Relation.h">
+			<Option target="CS236_Project1"/>
+		</Unit>
 		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/Rule.cpp">
 			<Option target="CS236_Project1"/>
 		</Unit>
@@ -193,6 +217,12 @@
 			<Option target="CS236_Project1"/>
 		</Unit>
 		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/Token.h">
+			<Option target="CS236_Project1"/>
+		</Unit>
+		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/Tuple.cpp">
+			<Option target="CS236_Project1"/>
+		</Unit>
+		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/Tuple.h">
 			<Option target="CS236_Project1"/>
 		</Unit>
 		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/UnclosedBlockCommentAutomaton.cpp">

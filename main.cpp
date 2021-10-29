@@ -1,5 +1,6 @@
 #include "Lexer.h"
 #include "Parser.h"
+
 #include <iostream>
 #include <fstream>
 #include "Token.h"
@@ -29,11 +30,18 @@ int main(int argc, char** argv) {
     vector<Token*> allTokens = lexer->getTokens();
 
     Parser* parser = new Parser(allTokens);
+    DatalogProgram* datalog;
+    Database* database;
     try {
         parser->parse();
+        datalog = parser->getProgram();
     } catch (Token* token) {
         cout << "Failure!" << endl << token->toString();
     }
+
+    datalog->createDatabase();
+    database = datalog->getDatabase();
+    database->print();
 
     //deletes stuff
     delete lexer;
