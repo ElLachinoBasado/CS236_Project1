@@ -31,7 +31,6 @@ int main(int argc, char** argv) {
 
     Parser* parser = new Parser(allTokens);
     DatalogProgram* datalog;
-    Database* database;
     try {
         parser->parse();
         datalog = parser->getProgram();
