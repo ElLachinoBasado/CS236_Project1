@@ -14,8 +14,8 @@ void Database::updateRelation(string toChange, Relation theRelation) {
 void Database::addTuple(Tuple toAdd, string theRelation) {
     //database.at(theRelation).addTuple(toAdd);
 }
-Relation * Database::getRelation(string theRelation) {
-    return database.at(theRelation);
+Relation Database::getRelation(string theRelation) {
+    return *database.at(theRelation);
 }
 
 void Database::print() {

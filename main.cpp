@@ -1,6 +1,6 @@
 #include "Lexer.h"
 #include "Parser.h"
-
+#include "Interpreter.h"
 #include <iostream>
 #include <fstream>
 #include "Token.h"
@@ -39,12 +39,11 @@ int main(int argc, char** argv) {
         cout << "Failure!" << endl << token->toString();
     }
 
-    datalog->createDatabase();
-    database = datalog->getDatabase();
-    database->print();
-
+    Interpreter * interpreter = new Interpreter(datalog);
+    interpreter->evaluateAllQueries();
     //deletes stuff
     delete lexer;
     delete parser;
+    delete interpreter;
     return 0;
 }

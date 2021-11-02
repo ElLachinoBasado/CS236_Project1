@@ -18,8 +18,9 @@ public:
     void addRelation(string theKey, Relation * toAdd); //emplace
     void updateRelation(string toChange, Relation theRelation); //database[toChange] = theRelation
     void addTuple(Tuple toAdd, string theRelation); //database.at(theRelation).addTuple(toAdd)
-    Relation * getRelation(string theRelation); //database.at(theRelation)
+    Relation getRelation(string theRelation); //database.at(theRelation)
     void print();
+
 };
 
 

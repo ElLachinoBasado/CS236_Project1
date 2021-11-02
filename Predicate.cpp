@@ -22,6 +22,13 @@ string Predicate::toString() {
 string Predicate::getName() {
     return name;
 }
-vector<Parameter*> Predicate::getParameterList() {
+vector<Parameter*> Predicate::getParameterPointerList() {
     return parameterList;
+}
+vector<Parameter> Predicate::getParameterList() {
+    vector<Parameter> tempList;
+    for (unsigned int i = 0; i < parameterList.size(); i++) {
+        tempList.push_back(*parameterList.at(i));
+    }
+    return tempList;
 }

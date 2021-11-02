@@ -18,7 +18,8 @@ public:
     Predicate(string id, vector<Parameter*> list);
     string toString();
     string getName();
-    vector<Parameter*> getParameterList();
+    vector<Parameter*> getParameterPointerList();
+    vector<Parameter> getParameterList();
 };
 
 

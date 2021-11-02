@@ -62,7 +62,7 @@ void DatalogProgram::createDatabase() {
         string relationName = schemes.at(i)->getName();
 
         //get header
-        vector<Parameter*> parameterHeaderList = schemes.at(i)->getParameterList();
+        vector<Parameter*> parameterHeaderList = schemes.at(i)->getParameterPointerList();
         vector<string> stringHeaderList;
         for (unsigned int j = 0; j < parameterHeaderList.size(); j++) {
             stringHeaderList.push_back(parameterHeaderList.at(j)->getValue());
@@ -75,7 +75,7 @@ void DatalogProgram::createDatabase() {
         //get tuples
         for (unsigned int j = 0; j < facts.size(); j++) {
             if (facts.at(j)->getName() == relationName) {
-                vector<Parameter*> parameterTupleList = facts.at(j)->getParameterList();
+                vector<Parameter*> parameterTupleList = facts.at(j)->getParameterPointerList();
                 vector<string> stringTupleList;
                 for (unsigned int k = 0; k < parameterTupleList.size(); k++) {
                     stringTupleList.push_back(parameterTupleList.at(k)->getValue());
@@ -86,4 +86,12 @@ void DatalogProgram::createDatabase() {
         }
         database->addRelation(relationName, newRelation);
     }
+}
+
+vector<Predicate> DatalogProgram::getQueries() {
+    vector<Predicate> queryCopy;
+    for (unsigned int i = 0; i < queries.size(); i++) {
+        queryCopy.push_back(*queries.at(i));
+    }
+    return queryCopy;
 }

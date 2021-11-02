@@ -13,6 +13,7 @@ private:
 public:
     Parameter(bool isCon, string input);
     string getValue();
+    bool getConstant();
 };
 
 

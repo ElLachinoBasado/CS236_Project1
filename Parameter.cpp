@@ -10,3 +10,5 @@ Parameter::Parameter(bool isCon, string input) {
 }
 
 string Parameter::getValue() {return value;}
+
+bool Parameter::getConstant() {return isConstant;}

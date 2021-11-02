@@ -152,6 +152,7 @@ CMakeFiles\CS236_Project1.dir\main.cpp.obj: ..\Automaton.h
 CMakeFiles\CS236_Project1.dir\main.cpp.obj: ..\Database.h
 CMakeFiles\CS236_Project1.dir\main.cpp.obj: ..\DatalogProgram.h
 CMakeFiles\CS236_Project1.dir\main.cpp.obj: ..\Header.h
+CMakeFiles\CS236_Project1.dir\main.cpp.obj: ..\Interpreter.h
 CMakeFiles\CS236_Project1.dir\main.cpp.obj: ..\Lexer.h
 CMakeFiles\CS236_Project1.dir\main.cpp.obj: ..\Parameter.h
 CMakeFiles\CS236_Project1.dir\main.cpp.obj: ..\Parser.h

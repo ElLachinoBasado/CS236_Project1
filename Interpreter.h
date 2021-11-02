@@ -4,7 +4,13 @@
 #include "Database.h"
 
 class Interpreter {
-
+private:
+    DatalogProgram datalogProgram;
+    Database database;
+public:
+    Interpreter(DatalogProgram * dpReference);
+    Relation evaluatePredicate(Predicate p);
+    void evaluateAllQueries();
 };
 
 

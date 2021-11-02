@@ -19,9 +19,12 @@ private:
 public:
     Relation(string theName, Header* theHeader);
     Relation select(int index, string value);
+    Relation select(int index1, int index2);
+    Relation rename(vector<string> newAttributes);
+    Relation project(vector<int> columns);
     void addTuple(Tuple toAdd);
     string toString();
-
+    bool isEmpty();
     Header* getHeader();
 };
 
