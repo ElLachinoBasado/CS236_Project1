@@ -20,9 +20,10 @@ void Relation::addTuple(Tuple toAdd) {
 string Relation::toString() {
     string newString = "";
     vector<string> headerValues = header->getAttributes();
-    newString = newString + "(" + to_string(domain.size()) + ")" + "\n  ";
+    newString = newString + "(" + to_string(domain.size()) + ")" + "\n";
     for (auto thisTuple : domain) {
         for (unsigned int i = 0; i < headerValues.size(); i++) {
+            newString += "  ";
             newString += headerValues.at(i);
             newString += "=";
             newString += thisTuple.toString(i);
