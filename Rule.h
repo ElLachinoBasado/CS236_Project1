@@ -15,6 +15,8 @@ private:
 public:
     Rule(Predicate* head, vector<Predicate*> list);
     string toString();
+    Predicate getHeadPredicate();
+    vector<Predicate> getPredicateList();
 };
 
 

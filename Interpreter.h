@@ -11,6 +11,8 @@ public:
     Interpreter(DatalogProgram * dpReference);
     Relation evaluatePredicate(Predicate p);
     void evaluateAllQueries();
+    void evaluateAllRules();
+
 };
 
 

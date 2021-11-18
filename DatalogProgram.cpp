@@ -95,3 +95,11 @@ vector<Predicate> DatalogProgram::getQueries() {
     }
     return queryCopy;
 }
+
+vector<Rule> DatalogProgram::getRules() {
+    vector<Rule> ruleCopy;
+    for (unsigned int i = 0; i < queries.size(); i++) {
+        ruleCopy.push_back(*rules.at(i));
+    }
+    return ruleCopy;
+}

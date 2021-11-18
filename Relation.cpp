@@ -4,9 +4,18 @@
 
 #include "Relation.h"
 
+
 Relation::Relation(string theName, Header* theHeader) {
     name = theName;
     header = theHeader;
+}
+
+string Relation::getName() {
+    return name;
+}
+
+set<Tuple> Relation::getDomain() {
+    return domain;
 }
 
 Header* Relation::getHeader() {
@@ -85,4 +94,67 @@ Relation Relation::project(vector<int> columns) {
 
 bool Relation::isEmpty() {
     return domain.empty();
+}
+
+Header * Relation::combineHeaders(Header a, Header b, map <int,int> &joinMap) {
+    vector<string> newAttributes = a.getAttributes();
+    int i = 0;
+    for (string currBAttribute : b.getAttributes()) {
+        int j = 0;
+        bool addAttribute = true;
+        for (string currAAttribute : a.getAttributes()) {
+            if (currAAttribute == currBAttribute) {
+                addAttribute = false;
+                joinMap.emplace(j,i);
+            }
+            j++;
+        }
+        i++;
+        if (addAttribute) newAttributes.push_back(currBAttribute);
+    }
+    Header * newHeader = new Header(newAttributes);
+    return newHeader;
+}
+bool Relation::isJoinable(Tuple & t, Tuple & u, map <int,int> & joinMap) {
+    for (auto & i : joinMap) {
+        if (t.getValue(i.first) != u.getValue(i.second)) return false;
+    }
+    return true;
+}
+
+Relation Relation::join(Relation secondRelation, string ruleName) {
+    map <int,int> joinMap;
+    Header * newHeader = combineHeaders(* header, * secondRelation.getHeader(), joinMap);
+    Relation newRelation(ruleName, newHeader);
+
+    for (Tuple t : domain) {
+        for (Tuple u : secondRelation.domain) {
+            if (isJoinable(t,u,joinMap)) {
+                newRelation.addTuple(tupleJoin(t,u,joinMap));
+            }
+        }
+    }
+    return newRelation;
+}
+
+Tuple Relation::tupleJoin(Tuple & t, Tuple & u, map <int,int> & joinMap) {
+    vector<string> values = t.getValues();
+    for (string toCheckU : u.getValues()) {
+        bool add = true;
+        for (string toCheckT : t.getValues()) {
+            if (toCheckU == toCheckT) add = false;
+        }
+        if (add) values.push_back(toCheckU);
+    }
+    Tuple newTuple(values);
+    return newTuple;
+}
+
+Relation::Relation(string theName, Header theHeader) {
+    header = &theHeader;
+    name = theName;
+}
+
+void Relation::setHeader(Header toSet) {
+    header = &toSet;
 }

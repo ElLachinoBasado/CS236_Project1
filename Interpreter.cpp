@@ -10,6 +10,29 @@ Interpreter::Interpreter(DatalogProgram * dpReference) {
     database = *datalogProgram.getDatabase();
 }
 
+void Interpreter::evaluateAllRules() {
+    for (Rule currRule : datalogProgram.getRules()) {
+        vector<Relation> intermediateRelations;
+        for (Predicate currPredicate: currRule.getPredicateList()) {
+            Relation tempRelation = evaluatePredicate(currPredicate);
+            intermediateRelations.push_back(tempRelation);
+            //cout << tempRelation.toString() << endl;
+        }
+
+        Relation newRelation = intermediateRelations.front();
+
+        while (intermediateRelations.size() > 1) {
+            Relation firstRelation = intermediateRelations.front(); //gets first element
+            Relation secondRelation = intermediateRelations.at(1); //gets second element
+            newRelation = firstRelation.join(secondRelation, currRule.getHeadPredicate().getName());
+
+            intermediateRelations.at(0) = newRelation;
+            intermediateRelations.erase(intermediateRelations.begin()+1); // removes second element
+        }
+        cout << newRelation.toString() << endl;
+    }
+}
+
 Relation Interpreter::evaluatePredicate(Predicate p) {
     //retrieves Relation
     string pName = p.getName();

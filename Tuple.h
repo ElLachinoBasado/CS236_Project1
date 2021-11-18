@@ -17,6 +17,7 @@ public:
     vector<string> getValues();
     string toString(int i);
     bool operator<(const Tuple &rhs) const;
+    string getValue (int i);
 };
 
 
