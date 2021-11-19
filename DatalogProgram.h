@@ -31,6 +31,7 @@ public:
     void createDatabase();
     vector<Predicate> getQueries();
     vector<Rule> getRules();
+    Predicate getScheme(string name);
 };
 
 

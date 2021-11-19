@@ -103,3 +103,13 @@ vector<Rule> DatalogProgram::getRules() {
     }
     return ruleCopy;
 }
+
+Predicate DatalogProgram::getScheme(string name) {
+    for (Predicate* currPredicate : schemes) {
+        if (currPredicate->getName() == name) {
+            return *currPredicate;
+        }
+    }
+    Predicate nullPredicate;
+    return nullPredicate;
+}

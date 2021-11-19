@@ -29,8 +29,32 @@ void Interpreter::evaluateAllRules() {
             intermediateRelations.at(0) = newRelation;
             intermediateRelations.erase(intermediateRelations.begin()+1); // removes second element
         }
+        newRelation = evaluateRule(currRule,newRelation);
         cout << newRelation.toString() << endl;
     }
+}
+
+Relation Interpreter::evaluateRule(Rule mainRule, Relation newRelation) {
+    Predicate p = mainRule.getHeadPredicate();
+
+    vector<Parameter> parameterList = p.getParameterList();
+    vector<int> markedIndices;
+    vector<string> seenValues;
+
+    Predicate scheme = datalogProgram.getScheme(mainRule.getHeadPredicate().getName());
+
+    for (unsigned int i = 0; i < parameterList.size(); i++) {
+        vector<string> tempHeader = newRelation.getHeader()->getAttributes();
+        seenValues.push_back(scheme.getParameterList().at(i).getValue());
+        for (unsigned int j = 0; j < tempHeader.size(); j++) {
+            if (parameterList.at(i).getValue() == tempHeader.at(j)) {
+                markedIndices.push_back(j);
+            }
+        }
+    }
+    newRelation = newRelation.project(markedIndices);
+    newRelation = newRelation.rename(seenValues);
+    return newRelation;
 }
 
 Relation Interpreter::evaluatePredicate(Predicate p) {
