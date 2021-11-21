@@ -114,7 +114,7 @@ void Interpreter::evaluateAllQueries() {
         if (newRelation.isEmpty()) {
             cout << " No" << endl;
         } else {
-            cout << " Yes" << newRelation.toString();
+            cout << " Yes(" << to_string(newRelation.getDomain().size()) << ")" << newRelation.toString();
         }
     }
 }
