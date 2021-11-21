@@ -38,12 +38,10 @@ do {
         newRelation = evaluateRule(currRule,newRelation);
         newRelation = database.getRelation(currRule.getHeadPredicate().getName()).unite(newRelation,output);
         Relation * newRelationPointer = new Relation(newRelation.getName(), newRelation.getHeader(), newRelation.getDomain());
-        keepLooping = database.updateRelation(currRule.getHeadPredicate().getName(), newRelationPointer);
+        keepLooping = database.updateRelation(currRule.getHeadPredicate().getName(), newRelationPointer, numIterations);
 
-        if (keepLooping == true) {
-            numIterations++;
         }
-        }
+        numIterations++;
     } while (keepLooping);
     output = output + "\nSchemes populated after " + to_string(numIterations) +  " passes through the Rules.\n";
     cout << output;

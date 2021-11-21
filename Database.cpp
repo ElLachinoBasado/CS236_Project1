@@ -8,11 +8,12 @@ void Database::addRelation(string theKey, Relation * toAdd) {
     database.emplace(theKey, toAdd);
 }
 
-bool Database::updateRelation(string toChange, Relation * theRelation) {
+bool Database::updateRelation(string toChange, Relation * theRelation, int & numIterations) {
     Relation * ogRelation = database[toChange];
     database[toChange] = theRelation;
 
     if (ogRelation->toString() != database[toChange]->toString()) {
+        //numIterations++;
         return true;
     } else {
         return false;

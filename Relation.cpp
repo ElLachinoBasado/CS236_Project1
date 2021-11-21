@@ -32,8 +32,8 @@ string Relation::toString() {
     //newString = newString + "(" + to_string(domain.size()) + ")" + "\n";
     newString = newString + "\n";
     for (auto thisTuple : domain) {
-        newString += " ";
         for (unsigned int i = 0; i < headerValues.size(); i++) {
+            if (i == 0) newString += " ";
             newString += " ";
             newString += headerValues.at(i);
             newString += "=";
