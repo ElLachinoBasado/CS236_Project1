@@ -20,13 +20,14 @@ private:
     Header* header;
 public:
     Relation(string theName, Header* theHeader);
+    Relation(string theName, Header* theHeader, set<Tuple> newDomain);
     Relation(string theName, Header theHeader);
     Relation select(int index, string value);
     Relation select(int index1, int index2);
     Relation rename(vector<string> newAttributes);
     Relation project(vector<int> columns);
     Relation join(Relation secondRelation, string ruleName);
-    Relation unite();
+    Relation unite(Relation otherRelation, string & output);
     bool isJoinable(Tuple & t, Tuple & u, map <int,int> & joinMap);
     Tuple tupleJoin(Tuple & t, Tuple & u, map <int,int> & joinMap);
     void addTuple(Tuple toAdd);
@@ -37,6 +38,7 @@ public:
     string getName();
     set<Tuple> getDomain();
     void setHeader(Header toSet);
+    void setName(string newName);
 };
 
 

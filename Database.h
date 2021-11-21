@@ -16,7 +16,7 @@ private:
 public:
     Database() = default;
     void addRelation(string theKey, Relation * toAdd); //emplace
-    void updateRelation(string toChange, Relation theRelation); //database[toChange] = theRelation
+    bool updateRelation(string toChange, Relation * theRelation); //database[toChange] = theRelation
     void addTuple(Tuple toAdd, string theRelation); //database.at(theRelation).addTuple(toAdd)
     Relation getRelation(string theRelation); //database.at(theRelation)
     void print();

@@ -29,15 +29,17 @@ void Relation::addTuple(Tuple toAdd) {
 string Relation::toString() {
     string newString = "";
     vector<string> headerValues = header->getAttributes();
-    newString = newString + "(" + to_string(domain.size()) + ")" + "\n";
+    //newString = newString + "(" + to_string(domain.size()) + ")" + "\n";
+    newString = newString + "\n";
     for (auto thisTuple : domain) {
+        newString += " ";
         for (unsigned int i = 0; i < headerValues.size(); i++) {
-            newString += "  ";
+            newString += " ";
             newString += headerValues.at(i);
             newString += "=";
             newString += thisTuple.toString(i);
             if (i != headerValues.size() - 1) {
-                newString += ", ";
+                newString += ",";
             } else {
                 newString += "\n";
             }
@@ -157,4 +159,34 @@ Relation::Relation(string theName, Header theHeader) {
 
 void Relation::setHeader(Header toSet) {
     header = &toSet;
+}
+
+Relation Relation::unite(Relation otherRelation, string & output) {
+    for (Tuple currTuple: otherRelation.getDomain()) {
+        if (domain.insert(currTuple).second) {
+            output += " ";
+            for (unsigned int i = 0; i < header->getAttributes().size(); i++) {
+                output += " ";
+                output += header->getAttributes().at(i);
+                output += "=";
+                output += currTuple.toString(i);
+                if (i != header->getAttributes().size() - 1) {
+                    output += ",";
+                } else {
+                    output += "\n";
+                }
+            }
+        }
+    }
+    return *this;
+}
+
+Relation::Relation(string theName, Header* theHeader, set<Tuple> newDomain) {
+   name = theName;
+   header = theHeader;
+   domain = newDomain;
+}
+
+void Relation::setName(string newName) {
+    name = newName;
 }

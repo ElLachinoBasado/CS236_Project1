@@ -11,12 +11,15 @@ Interpreter::Interpreter(DatalogProgram * dpReference) {
 }
 
 void Interpreter::evaluateAllRules() {
+string output = "Rule Evaluation\n";
+int numIterations = 0;
+bool keepLooping = true;
+do {
     for (Rule currRule : datalogProgram.getRules()) {
         vector<Relation> intermediateRelations;
         for (Predicate currPredicate: currRule.getPredicateList()) {
             Relation tempRelation = evaluatePredicate(currPredicate);
             intermediateRelations.push_back(tempRelation);
-            //cout << tempRelation.toString() << endl;
         }
 
         Relation newRelation = intermediateRelations.front();
@@ -29,9 +32,21 @@ void Interpreter::evaluateAllRules() {
             intermediateRelations.at(0) = newRelation;
             intermediateRelations.erase(intermediateRelations.begin()+1); // removes second element
         }
+        output += currRule.toString();
+        output += "\n";
+        //string currRuleName = intermediateRelations.front().getName();
         newRelation = evaluateRule(currRule,newRelation);
-        cout << newRelation.toString() << endl;
-    }
+        newRelation = database.getRelation(currRule.getHeadPredicate().getName()).unite(newRelation,output);
+        Relation * newRelationPointer = new Relation(newRelation.getName(), newRelation.getHeader(), newRelation.getDomain());
+        keepLooping = database.updateRelation(currRule.getHeadPredicate().getName(), newRelationPointer);
+
+        if (keepLooping == true) {
+            numIterations++;
+        }
+        }
+    } while (keepLooping);
+    output = output + "\nSchemes populated after " + to_string(numIterations) +  " passes through the Rules.\n";
+    cout << output;
 }
 
 Relation Interpreter::evaluateRule(Rule mainRule, Relation newRelation) {
@@ -52,8 +67,10 @@ Relation Interpreter::evaluateRule(Rule mainRule, Relation newRelation) {
             }
         }
     }
+
     newRelation = newRelation.project(markedIndices);
     newRelation = newRelation.rename(seenValues);
+    newRelation.setName(p.getName());
     return newRelation;
 }
 
@@ -90,6 +107,7 @@ Relation Interpreter::evaluatePredicate(Predicate p) {
 }
 
 void Interpreter::evaluateAllQueries() {
+    cout << endl << "Query Evaluation" << endl;
     for (Predicate currQuery : datalogProgram.getQueries()) {
         cout << currQuery.toString() << "?";
         Relation newRelation = evaluatePredicate(currQuery);
