@@ -13,7 +13,6 @@ bool Database::updateRelation(string toChange, Relation * theRelation, int & num
     database[toChange] = theRelation;
 
     if (ogRelation->toString() != database[toChange]->toString()) {
-        //numIterations++;
         return true;
     } else {
         return false;

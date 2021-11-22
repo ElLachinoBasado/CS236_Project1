@@ -28,13 +28,13 @@ public:
     Relation project(vector<int> columns);
     Relation join(Relation secondRelation, string ruleName);
     Relation unite(Relation otherRelation, string & output);
-    bool isJoinable(Tuple & t, Tuple & u, map <int,int> & joinMap);
-    Tuple tupleJoin(Tuple & t, Tuple & u, map <int,int> & joinMap);
+    bool isJoinable(Tuple & t, Tuple & u, vector <pair<int,int>> & joinMap);
+    Tuple tupleJoin(Tuple & t, Tuple & u, vector <pair<int,int>> & joinMap);
     void addTuple(Tuple toAdd);
     string toString();
     bool isEmpty();
     Header* getHeader();
-    Header* combineHeaders(Header a, Header b, map <int,int> &joinMap);
+    Header* combineHeaders(Header a, Header b, vector <pair<int,int>> & joinMap);
     string getName();
     set<Tuple> getDomain();
     void setHeader(Header toSet);

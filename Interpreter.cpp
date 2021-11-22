@@ -12,8 +12,10 @@ Interpreter::Interpreter(DatalogProgram * dpReference) {
 
 void Interpreter::evaluateAllRules() {
 string output = "Rule Evaluation\n";
-int numIterations = 0;
+int numIterations = 1;
 bool keepLooping = true;
+bool wasUpdated = false;
+    string ruleToPrint;
 do {
     for (Rule currRule : datalogProgram.getRules()) {
         vector<Relation> intermediateRelations;
@@ -32,17 +34,20 @@ do {
             intermediateRelations.at(0) = newRelation;
             intermediateRelations.erase(intermediateRelations.begin()+1); // removes second element
         }
-        output += currRule.toString();
+        ruleToPrint = currRule.toString();
+        output += ruleToPrint;
         output += "\n";
         //string currRuleName = intermediateRelations.front().getName();
         newRelation = evaluateRule(currRule,newRelation);
         newRelation = database.getRelation(currRule.getHeadPredicate().getName()).unite(newRelation,output);
         Relation * newRelationPointer = new Relation(newRelation.getName(), newRelation.getHeader(), newRelation.getDomain());
-        keepLooping = database.updateRelation(currRule.getHeadPredicate().getName(), newRelationPointer, numIterations);
+        wasUpdated = database.updateRelation(currRule.getHeadPredicate().getName(), newRelationPointer, numIterations);
 
         }
         numIterations++;
+        if (wasUpdated) keepLooping = false;
     } while (keepLooping);
+    output += ruleToPrint + "\n";
     output = output + "\nSchemes populated after " + to_string(numIterations) +  " passes through the Rules.\n";
     cout << output;
 }

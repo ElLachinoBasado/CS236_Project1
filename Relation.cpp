@@ -98,7 +98,7 @@ bool Relation::isEmpty() {
     return domain.empty();
 }
 
-Header * Relation::combineHeaders(Header a, Header b, map <int,int> &joinMap) {
+Header * Relation::combineHeaders(Header a, Header b, vector <pair<int,int>> & joinMap) {
     vector<string> newAttributes = a.getAttributes();
     int i = 0;
     for (string currBAttribute : b.getAttributes()) {
@@ -107,7 +107,8 @@ Header * Relation::combineHeaders(Header a, Header b, map <int,int> &joinMap) {
         for (string currAAttribute : a.getAttributes()) {
             if (currAAttribute == currBAttribute) {
                 addAttribute = false;
-                joinMap.emplace(j,i);
+                pair<int,int> newPair(j,i);
+                joinMap.push_back(newPair);
             }
             j++;
         }
@@ -117,7 +118,7 @@ Header * Relation::combineHeaders(Header a, Header b, map <int,int> &joinMap) {
     Header * newHeader = new Header(newAttributes);
     return newHeader;
 }
-bool Relation::isJoinable(Tuple & t, Tuple & u, map <int,int> & joinMap) {
+bool Relation::isJoinable(Tuple & t, Tuple & u, vector <pair<int,int>> & joinMap) {
     for (auto & i : joinMap) {
         if (t.getValue(i.first) != u.getValue(i.second)) return false;
     }
@@ -125,7 +126,8 @@ bool Relation::isJoinable(Tuple & t, Tuple & u, map <int,int> & joinMap) {
 }
 
 Relation Relation::join(Relation secondRelation, string ruleName) {
-    map <int,int> joinMap;
+    //map <int,int> joinMap;
+    vector <pair<int,int>> joinMap;
     Header * newHeader = combineHeaders(* header, * secondRelation.getHeader(), joinMap);
     Relation newRelation(ruleName, newHeader);
 
@@ -139,7 +141,7 @@ Relation Relation::join(Relation secondRelation, string ruleName) {
     return newRelation;
 }
 
-Tuple Relation::tupleJoin(Tuple & t, Tuple & u, map <int,int> & joinMap) {
+Tuple Relation::tupleJoin(Tuple & t, Tuple & u, vector <pair<int,int>> & joinMap) {
     vector<string> values = t.getValues();
     for (string toCheckU : u.getValues()) {
         bool add = true;
