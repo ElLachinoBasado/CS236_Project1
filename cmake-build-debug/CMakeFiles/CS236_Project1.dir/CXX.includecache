@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/Helaman/CLionProjects/CS236_Project1/Automaton.h
+Token.h
+C:/Users/Helaman/CLionProjects/CS236_Project1/Token.h
+
 C:/Users/Helaman/CLionProjects/CS236_Project1/Database.h
 string
 -
@@ -38,18 +42,38 @@ string
 vector
 -
 
-C:/Users/Helaman/CLionProjects/CS236_Project1/Interpreter.cpp
-Interpreter.h
-C:/Users/Helaman/CLionProjects/CS236_Project1/Interpreter.h
-
 C:/Users/Helaman/CLionProjects/CS236_Project1/Interpreter.h
 DatalogProgram.h
 C:/Users/Helaman/CLionProjects/CS236_Project1/DatalogProgram.h
 Database.h
 C:/Users/Helaman/CLionProjects/CS236_Project1/Database.h
 
+C:/Users/Helaman/CLionProjects/CS236_Project1/Lexer.h
+vector
+-
+Automaton.h
+C:/Users/Helaman/CLionProjects/CS236_Project1/Automaton.h
+Token.h
+C:/Users/Helaman/CLionProjects/CS236_Project1/Token.h
+
 C:/Users/Helaman/CLionProjects/CS236_Project1/Parameter.h
 string
+-
+
+C:/Users/Helaman/CLionProjects/CS236_Project1/Parser.h
+Token.h
+C:/Users/Helaman/CLionProjects/CS236_Project1/Token.h
+DatalogProgram.h
+C:/Users/Helaman/CLionProjects/CS236_Project1/DatalogProgram.h
+Parser.h
+C:/Users/Helaman/CLionProjects/CS236_Project1/Parser.h
+Parameter.h
+C:/Users/Helaman/CLionProjects/CS236_Project1/Parameter.h
+Predicate.h
+C:/Users/Helaman/CLionProjects/CS236_Project1/Predicate.h
+Rule.h
+C:/Users/Helaman/CLionProjects/CS236_Project1/Rule.h
+vector
 -
 
 C:/Users/Helaman/CLionProjects/CS236_Project1/Predicate.h
@@ -65,15 +89,11 @@ Tuple.h
 C:/Users/Helaman/CLionProjects/CS236_Project1/Tuple.h
 Header.h
 C:/Users/Helaman/CLionProjects/CS236_Project1/Header.h
-map
--
 vector
 -
 set
 -
 string
--
-iostream
 -
 
 C:/Users/Helaman/CLionProjects/CS236_Project1/Rule.h
@@ -84,9 +104,27 @@ vector
 Predicate.h
 C:/Users/Helaman/CLionProjects/CS236_Project1/Predicate.h
 
+C:/Users/Helaman/CLionProjects/CS236_Project1/Token.h
+string
+-
+
 C:/Users/Helaman/CLionProjects/CS236_Project1/Tuple.h
 string
 -
 vector
 -
+
+C:/Users/Helaman/CLionProjects/CS236_Project1/main.cpp
+Lexer.h
+C:/Users/Helaman/CLionProjects/CS236_Project1/Lexer.h
+Parser.h
+C:/Users/Helaman/CLionProjects/CS236_Project1/Parser.h
+Interpreter.h
+C:/Users/Helaman/CLionProjects/CS236_Project1/Interpreter.h
+iostream
+-
+fstream
+-
+Token.h
+C:/Users/Helaman/CLionProjects/CS236_Project1/Token.h
 

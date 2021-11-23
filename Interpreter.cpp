@@ -10,73 +10,6 @@ Interpreter::Interpreter(DatalogProgram * dpReference) {
     database = *datalogProgram.getDatabase();
 }
 
-void Interpreter::evaluateAllRules() {
-string output = "Rule Evaluation\n";
-int numIterations = 1;
-bool keepLooping = true;
-bool wasUpdated = false;
-    string ruleToPrint;
-do {
-    for (Rule currRule : datalogProgram.getRules()) {
-        vector<Relation> intermediateRelations;
-        for (Predicate currPredicate: currRule.getPredicateList()) {
-            Relation tempRelation = evaluatePredicate(currPredicate);
-            intermediateRelations.push_back(tempRelation);
-        }
-
-        Relation newRelation = intermediateRelations.front();
-
-        while (intermediateRelations.size() > 1) {
-            Relation firstRelation = intermediateRelations.front(); //gets first element
-            Relation secondRelation = intermediateRelations.at(1); //gets second element
-            newRelation = firstRelation.join(secondRelation, currRule.getHeadPredicate().getName());
-
-            intermediateRelations.at(0) = newRelation;
-            intermediateRelations.erase(intermediateRelations.begin()+1); // removes second element
-        }
-        ruleToPrint = currRule.toString();
-        output += ruleToPrint;
-        output += "\n";
-        //string currRuleName = intermediateRelations.front().getName();
-        newRelation = evaluateRule(currRule,newRelation);
-        newRelation = database.getRelation(currRule.getHeadPredicate().getName()).unite(newRelation,output);
-        Relation * newRelationPointer = new Relation(newRelation.getName(), newRelation.getHeader(), newRelation.getDomain());
-        wasUpdated = database.updateRelation(currRule.getHeadPredicate().getName(), newRelationPointer, numIterations);
-
-        }
-        numIterations++;
-        if (wasUpdated) keepLooping = false;
-    } while (keepLooping);
-    output += ruleToPrint + "\n";
-    output = output + "\nSchemes populated after " + to_string(numIterations) +  " passes through the Rules.\n";
-    cout << output;
-}
-
-Relation Interpreter::evaluateRule(Rule mainRule, Relation newRelation) {
-    Predicate p = mainRule.getHeadPredicate();
-
-    vector<Parameter> parameterList = p.getParameterList();
-    vector<int> markedIndices;
-    vector<string> seenValues;
-
-    Predicate scheme = datalogProgram.getScheme(mainRule.getHeadPredicate().getName());
-
-    for (unsigned int i = 0; i < parameterList.size(); i++) {
-        vector<string> tempHeader = newRelation.getHeader()->getAttributes();
-        seenValues.push_back(scheme.getParameterList().at(i).getValue());
-        for (unsigned int j = 0; j < tempHeader.size(); j++) {
-            if (parameterList.at(i).getValue() == tempHeader.at(j)) {
-                markedIndices.push_back(j);
-            }
-        }
-    }
-
-    newRelation = newRelation.project(markedIndices);
-    newRelation = newRelation.rename(seenValues);
-    newRelation.setName(p.getName());
-    return newRelation;
-}
-
 Relation Interpreter::evaluatePredicate(Predicate p) {
     //retrieves Relation
     string pName = p.getName();
@@ -110,14 +43,13 @@ Relation Interpreter::evaluatePredicate(Predicate p) {
 }
 
 void Interpreter::evaluateAllQueries() {
-    cout << endl << "Query Evaluation" << endl;
     for (Predicate currQuery : datalogProgram.getQueries()) {
         cout << currQuery.toString() << "?";
         Relation newRelation = evaluatePredicate(currQuery);
         if (newRelation.isEmpty()) {
             cout << " No" << endl;
         } else {
-            cout << " Yes(" << to_string(newRelation.getDomain().size()) << ")" << newRelation.toString();
+            cout << " Yes" << newRelation.toString();
         }
     }
 }

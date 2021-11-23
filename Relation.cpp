@@ -4,18 +4,9 @@
 
 #include "Relation.h"
 
-
 Relation::Relation(string theName, Header* theHeader) {
     name = theName;
     header = theHeader;
-}
-
-string Relation::getName() {
-    return name;
-}
-
-set<Tuple> Relation::getDomain() {
-    return domain;
 }
 
 Header* Relation::getHeader() {
@@ -29,17 +20,15 @@ void Relation::addTuple(Tuple toAdd) {
 string Relation::toString() {
     string newString = "";
     vector<string> headerValues = header->getAttributes();
-    //newString = newString + "(" + to_string(domain.size()) + ")" + "\n";
-    newString = newString + "\n";
+    newString = newString + "(" + to_string(domain.size()) + ")" + "\n";
     for (auto thisTuple : domain) {
         for (unsigned int i = 0; i < headerValues.size(); i++) {
-            if (i == 0) newString += " ";
-            newString += " ";
+            newString += "  ";
             newString += headerValues.at(i);
             newString += "=";
             newString += thisTuple.toString(i);
             if (i != headerValues.size() - 1) {
-                newString += ",";
+                newString += ", ";
             } else {
                 newString += "\n";
             }
@@ -96,99 +85,4 @@ Relation Relation::project(vector<int> columns) {
 
 bool Relation::isEmpty() {
     return domain.empty();
-}
-
-Header * Relation::combineHeaders(Header a, Header b, vector <pair<int,int>> & joinMap) {
-    vector<string> newAttributes = a.getAttributes();
-    int i = 0;
-    for (string currBAttribute : b.getAttributes()) {
-        int j = 0;
-        bool addAttribute = true;
-        for (string currAAttribute : a.getAttributes()) {
-            if (currAAttribute == currBAttribute) {
-                addAttribute = false;
-                pair<int,int> newPair(j,i);
-                joinMap.push_back(newPair);
-            }
-            j++;
-        }
-        i++;
-        if (addAttribute) newAttributes.push_back(currBAttribute);
-    }
-    Header * newHeader = new Header(newAttributes);
-    return newHeader;
-}
-bool Relation::isJoinable(Tuple & t, Tuple & u, vector <pair<int,int>> & joinMap) {
-    for (auto & i : joinMap) {
-        if (t.getValue(i.first) != u.getValue(i.second)) return false;
-    }
-    return true;
-}
-
-Relation Relation::join(Relation secondRelation, string ruleName) {
-    //map <int,int> joinMap;
-    vector <pair<int,int>> joinMap;
-    Header * newHeader = combineHeaders(* header, * secondRelation.getHeader(), joinMap);
-    Relation newRelation(ruleName, newHeader);
-
-    for (Tuple t : domain) {
-        for (Tuple u : secondRelation.domain) {
-            if (isJoinable(t,u,joinMap)) {
-                newRelation.addTuple(tupleJoin(t,u,joinMap));
-            }
-        }
-    }
-    return newRelation;
-}
-
-Tuple Relation::tupleJoin(Tuple & t, Tuple & u, vector <pair<int,int>> & joinMap) {
-    vector<string> values = t.getValues();
-    for (string toCheckU : u.getValues()) {
-        bool add = true;
-        for (string toCheckT : t.getValues()) {
-            if (toCheckU == toCheckT) add = false;
-        }
-        if (add) values.push_back(toCheckU);
-    }
-    Tuple newTuple(values);
-    return newTuple;
-}
-
-Relation::Relation(string theName, Header theHeader) {
-    header = &theHeader;
-    name = theName;
-}
-
-void Relation::setHeader(Header toSet) {
-    header = &toSet;
-}
-
-Relation Relation::unite(Relation otherRelation, string & output) {
-    for (Tuple currTuple: otherRelation.getDomain()) {
-        if (domain.insert(currTuple).second) {
-            output += " ";
-            for (unsigned int i = 0; i < header->getAttributes().size(); i++) {
-                output += " ";
-                output += header->getAttributes().at(i);
-                output += "=";
-                output += currTuple.toString(i);
-                if (i != header->getAttributes().size() - 1) {
-                    output += ",";
-                } else {
-                    output += "\n";
-                }
-            }
-        }
-    }
-    return *this;
-}
-
-Relation::Relation(string theName, Header* theHeader, set<Tuple> newDomain) {
-   name = theName;
-   header = theHeader;
-   domain = newDomain;
-}
-
-void Relation::setName(string newName) {
-    name = newName;
 }

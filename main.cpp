@@ -39,7 +39,6 @@ int main(int argc, char** argv) {
     }
 
     Interpreter * interpreter = new Interpreter(datalog);
-    interpreter->evaluateAllRules();
     interpreter->evaluateAllQueries();
     //deletes stuff
     delete lexer;

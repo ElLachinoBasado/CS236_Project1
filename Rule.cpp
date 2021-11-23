@@ -20,15 +20,3 @@ string Rule::toString() {
     result = result + ".";
     return result;
 }
-
-Predicate Rule::getHeadPredicate() {
-    return * headPredicate;
-}
-
-vector<Predicate> Rule::getPredicateList() {
-    vector<Predicate> tempPredList;
-    for (Predicate * currPredicate : predicateList) {
-        tempPredList.push_back(* currPredicate);
-    }
-    return tempPredList;
-}

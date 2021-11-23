@@ -95,21 +95,3 @@ vector<Predicate> DatalogProgram::getQueries() {
     }
     return queryCopy;
 }
-
-vector<Rule> DatalogProgram::getRules() {
-    vector<Rule> ruleCopy;
-    for (unsigned int i = 0; i < rules.size(); i++) {
-        ruleCopy.push_back(*rules.at(i));
-    }
-    return ruleCopy;
-}
-
-Predicate DatalogProgram::getScheme(string name) {
-    for (Predicate* currPredicate : schemes) {
-        if (currPredicate->getName() == name) {
-            return *currPredicate;
-        }
-    }
-    Predicate nullPredicate;
-    return nullPredicate;
-}
