@@ -30,6 +30,7 @@ public:
     Database * getDatabase();
     void createDatabase();
     vector<Predicate> getQueries();
+    vector<Rule> getRules();
 };
 
 

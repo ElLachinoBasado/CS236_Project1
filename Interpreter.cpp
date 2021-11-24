@@ -53,3 +53,31 @@ void Interpreter::evaluateAllQueries() {
         }
     }
 }
+
+void Interpreter::evaluateAllRules() {
+    string output = "Rule Evaluation";
+
+    bool databaseUpdated = true;
+    do {
+         vector<Rule> allRules = datalogProgram.getRules();    //1. retrieve rules from DatalogProgram
+         vector<Relation> intermediateRelations = getIntermediateRelations (allRules); //2. iterate through them + 3. evaluate predicates on right-hand side of the rule todo - getIntermediateRelations()
+         //4. If there are multiple relations, join them todo - create join function in relation
+         // todo - create function for 5-6
+         //5. Project columns that appear in the head predicate
+         //6. Rename the relation to make it union-compatible
+         //7. Unite the relation with the database
+        databaseUpdated = false; //todo - end the while loop after the database stops updating
+    } while (databaseUpdated);
+
+    cout << output << endl;//print output
+}
+
+/**
+ *
+ * @param allRules - every rule found in the datalog program
+ * @return all of the intermediate relations, as described in step 1 of the evaluating rules write up
+ */
+vector<Relation> Interpreter::getIntermediateRelations(vector<Rule> allRules) {
+    vector<Relation> intermediateRelations;
+    return intermediateRelations;
+}

@@ -8,10 +8,13 @@ private:
     DatalogProgram datalogProgram;
     Database database;
 public:
-    Interpreter(DatalogProgram * dpReference);
+    Interpreter(DatalogProgram *dpReference);
+
     Relation evaluatePredicate(Predicate p);
+
     void evaluateAllQueries();
+    void evaluateAllRules();
+
+    vector<Relation> getIntermediateRelations(vector<Rule> allRules);
 };
-
-
 #endif //LEXICALANALYZER_INTERPRETER_H

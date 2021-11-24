@@ -95,3 +95,9 @@ vector<Predicate> DatalogProgram::getQueries() {
     }
     return queryCopy;
 }
+
+vector<Rule> DatalogProgram::getRules() {
+    vector<Rule> ruleCopies;
+    for (Rule * currRule : rules) {ruleCopies.push_back(*currRule);}
+    return ruleCopies;
+}
