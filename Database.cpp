@@ -8,8 +8,8 @@ void Database::addRelation(string theKey, Relation * toAdd) {
     database.emplace(theKey, toAdd);
 }
 
-void Database::updateRelation(string toChange, Relation theRelation) {
-    //database[toChange] = theRelation;
+void Database::updateRelation(string toChange, Relation * theRelation) {
+    database[toChange] = theRelation;
 }
 void Database::addTuple(Tuple toAdd, string theRelation) {
     //database.at(theRelation).addTuple(toAdd);

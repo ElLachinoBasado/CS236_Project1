@@ -20,3 +20,7 @@ string Header::toString() {
     }
     return headerElements;
 }
+
+void Header::addAttribute(string attributeToAdd) {
+    attributes.push_back(attributeToAdd);
+}

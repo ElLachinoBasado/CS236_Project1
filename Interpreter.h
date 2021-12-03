@@ -15,6 +15,8 @@ public:
     void evaluateAllQueries();
     void evaluateAllRules();
 
-    vector<Relation> getIntermediateRelations(vector<Rule> allRules);
+    bool evaluateRule(Rule evaluatedRule, string & output);
+    vector<Relation> getIntermediateRelations(Rule ruleToCheck);
+    Relation joinRelations(vector<Relation> relations, string ruleName);
 };
 #endif //LEXICALANALYZER_INTERPRETER_H

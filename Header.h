@@ -15,6 +15,7 @@ public:
     Header(vector<string> attributeList);
     vector<string> getAttributes();
     string toString();
+    void addAttribute(string attributeToAdd);
 };
 
 

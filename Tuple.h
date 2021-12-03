@@ -15,8 +15,10 @@ private:
 public:
     Tuple(vector<string> neededValues);
     vector<string> getValues();
+    string getValue (int i);
     string toString(int i);
     bool operator<(const Tuple &rhs) const;
+    void addValue(string newValue);
 };
 
 

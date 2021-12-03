@@ -55,21 +55,56 @@ void Interpreter::evaluateAllQueries() {
 }
 
 void Interpreter::evaluateAllRules() {
-    string output = "Rule Evaluation";
 
-    bool databaseUpdated = true;
+    int numberOfIterations = 0;
+    bool keepRepeating = true;
+    string output = "Rule Evaluation\n";
     do {
-         vector<Rule> allRules = datalogProgram.getRules();    //1. retrieve rules from DatalogProgram
-         vector<Relation> intermediateRelations = getIntermediateRelations (allRules); //2. iterate through them + 3. evaluate predicates on right-hand side of the rule todo - getIntermediateRelations()
-         //4. If there are multiple relations, join them todo - create join function in relation
-         // todo - create function for 5-6
-         //5. Project columns that appear in the head predicate
-         //6. Rename the relation to make it union-compatible
-         //7. Unite the relation with the database
-        databaseUpdated = false; //todo - end the while loop after the database stops updating
-    } while (databaseUpdated);
+        keepRepeating = false;
+        for (Rule currentRule : datalogProgram.getRules()) {
+            output += currentRule.toString() + "\n";
+            if (evaluateRule(currentRule,output)) keepRepeating = true;
+        }
+        numberOfIterations++;
+    } while (keepRepeating);
+    cout << output << endl << "Schemes populated after " << numberOfIterations << " passes through the Rules." << endl;
+}
 
-    cout << output << endl;//print output
+bool Interpreter::evaluateRule(Rule evaluatedRule, string & output) {
+    vector<Relation> relations = getIntermediateRelations(evaluatedRule); //gets intermediate relations
+
+    Relation combinedRelation = joinRelations(relations, evaluatedRule.getName());
+
+    vector<int> valuesToKeep;
+    vector<string> vectorRename;
+    for (unsigned int i = 0; i < evaluatedRule.getHeadPredicate()->getParameterList().size(); i++) {
+        for (unsigned int j = 0; j < combinedRelation.getHeader()->getAttributes().size(); j++) {
+            if (evaluatedRule.getHeadPredicate()->getParameterList().at(i).getValue() == combinedRelation.getHeader()->getAttributes().at(j)) {
+                valuesToKeep.push_back(j);
+                vectorRename.push_back(evaluatedRule.getHeadPredicate()->getParameterList().at(i).getValue());
+            }
+        }
+    }
+
+    combinedRelation = combinedRelation.project(valuesToKeep);
+    combinedRelation = combinedRelation.rename(vectorRename);
+    bool tuplesAdded = false;
+    Relation newRelation = database.getRelation(evaluatedRule.getHeadPredicate()->getName());
+    newRelation = combinedRelation.unite(newRelation,tuplesAdded, output);
+    Relation * finalRelation = new Relation(newRelation.getName(),newRelation.getHeader());
+    finalRelation->setDomain(newRelation.getDomain());
+    database.updateRelation(newRelation.getName(), finalRelation);
+    return tuplesAdded;
+}
+
+Relation Interpreter::joinRelations(vector<Relation> relations, string ruleName) {
+    Relation combinedRelation = relations.at(0);
+    if (relations.size() > 1) {
+        for (unsigned int i = 1; i < relations.size(); i++) {
+            combinedRelation = combinedRelation.join(relations.at(i),ruleName);
+        }
+    }
+    return combinedRelation;
 }
 
 /**
@@ -77,7 +112,11 @@ void Interpreter::evaluateAllRules() {
  * @param allRules - every rule found in the datalog program
  * @return all of the intermediate relations, as described in step 1 of the evaluating rules write up
  */
-vector<Relation> Interpreter::getIntermediateRelations(vector<Rule> allRules) {
+vector<Relation> Interpreter::getIntermediateRelations(Rule ruleToCheck) {
     vector<Relation> intermediateRelations;
+    for (Predicate currPredicate : ruleToCheck.getPredicateList()) {
+        intermediateRelations.push_back(evaluatePredicate(currPredicate));
+    }
+
     return intermediateRelations;
 }

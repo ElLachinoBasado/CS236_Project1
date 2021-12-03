@@ -10,6 +10,12 @@ C:/Users/Helaman/CLionProjects/CS236_Project1/Automaton.h
 Token.h
 C:/Users/Helaman/CLionProjects/CS236_Project1/Token.h
 
+C:/Users/Helaman/CLionProjects/CS236_Project1/Database.cpp
+iostream
+-
+Database.h
+C:/Users/Helaman/CLionProjects/CS236_Project1/Database.h
+
 C:/Users/Helaman/CLionProjects/CS236_Project1/Database.h
 string
 -
@@ -19,6 +25,10 @@ Tuple.h
 C:/Users/Helaman/CLionProjects/CS236_Project1/Tuple.h
 map
 -
+
+C:/Users/Helaman/CLionProjects/CS236_Project1/DatalogProgram.cpp
+DatalogProgram.h
+C:/Users/Helaman/CLionProjects/CS236_Project1/DatalogProgram.h
 
 C:/Users/Helaman/CLionProjects/CS236_Project1/DatalogProgram.h
 Rule.h
@@ -64,6 +74,12 @@ C:/Users/Helaman/CLionProjects/CS236_Project1/Parameter.h
 string
 -
 
+C:/Users/Helaman/CLionProjects/CS236_Project1/Parser.cpp
+Parser.h
+C:/Users/Helaman/CLionProjects/CS236_Project1/Parser.h
+iostream
+-
+
 C:/Users/Helaman/CLionProjects/CS236_Project1/Parser.h
 Token.h
 C:/Users/Helaman/CLionProjects/CS236_Project1/Token.h
@@ -88,6 +104,10 @@ vector
 Parameter.h
 C:/Users/Helaman/CLionProjects/CS236_Project1/Parameter.h
 
+C:/Users/Helaman/CLionProjects/CS236_Project1/Relation.cpp
+Relation.h
+C:/Users/Helaman/CLionProjects/CS236_Project1/Relation.h
+
 C:/Users/Helaman/CLionProjects/CS236_Project1/Relation.h
 Tuple.h
 C:/Users/Helaman/CLionProjects/CS236_Project1/Tuple.h
@@ -98,6 +118,8 @@ vector
 set
 -
 string
+-
+map
 -
 
 C:/Users/Helaman/CLionProjects/CS236_Project1/Rule.h

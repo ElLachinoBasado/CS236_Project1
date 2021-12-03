@@ -20,3 +20,19 @@ string Rule::toString() {
     result = result + ".";
     return result;
 }
+
+vector<Predicate> Rule::getPredicateList() {
+    vector<Predicate> newPredicateList;
+    for (Predicate * currPredicatePointer : predicateList) {
+        newPredicateList.push_back(*currPredicatePointer);
+    }
+    return newPredicateList;
+}
+
+string Rule::getName() {
+    return headPredicate->getName();
+}
+
+Predicate* Rule::getHeadPredicate() {
+    return headPredicate;
+}
