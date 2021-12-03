@@ -142,7 +142,7 @@ Tuple Relation::combineTuples(Tuple t, Tuple u, map<int,int> joinMap) {
     bool shouldSkip;
     for (unsigned int i = 0; i < u.getValues().size(); i++) {
         shouldSkip = false;
-        for (unsigned int j = 0; j < ignoredValues.size(); j++) if (i == signed(ignoredValues.at(j))) shouldSkip = true;
+        for (unsigned int j = 0; j < ignoredValues.size(); j++) if (signed(i) == ignoredValues.at(j)) shouldSkip = true;
         if (!shouldSkip) joinedTuple.addValue(u.getValue(i));
     }
     return joinedTuple;
