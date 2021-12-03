@@ -148,22 +148,23 @@ Tuple Relation::combineTuples(Tuple t, Tuple u, map<int,int> joinMap) {
     return joinedTuple;
 }
 
-Relation Relation::unite(Relation r, bool & addTuple, string & output) {
+Relation Relation::unite(Relation databaseRelation, bool & addTuple, string & output) {
     for (Tuple t : domain) {
-        if (r.domain.insert(t).second) {
-            output += convertTuple(t) + "\n";
+        if (databaseRelation.domain.insert(t).second) {
+            output += convertTuple(t, databaseRelation) + "\n";
             addTuple = true;
         }
     }
-    return r;
+    return databaseRelation;
 }
 
-string Relation::convertTuple(Tuple t) {
+string Relation::convertTuple(Tuple t, Relation databaseRelation) {
+
     string result = "";
-    for (unsigned int i = 0; i < header->getAttributes().size()-1; i++) {
-        result += header->getAttributes().at(i) + "=" + t.getValue(i) + ", ";
+    for (unsigned int i = 0; i < databaseRelation.getHeader()->getAttributes().size()-1; i++) {
+        result += "  " + databaseRelation.getHeader()->getAttributes().at(i) + "=" + t.getValue(i) + ", ";
     }
-    result += header->getAttributes().at(header->getAttributes().size()-1) + "=" + t.getValue(header->getAttributes().size()-1);
+    result += databaseRelation.getHeader()->getAttributes().at(databaseRelation.getHeader()->getAttributes().size()-1) + "=" + t.getValue(header->getAttributes().size()-1);
     return result;
 }
 

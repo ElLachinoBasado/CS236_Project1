@@ -43,6 +43,7 @@ Relation Interpreter::evaluatePredicate(Predicate p) {
 }
 
 void Interpreter::evaluateAllQueries() {
+    cout << "\nQuery Evaluation\n";
     for (Predicate currQuery : datalogProgram.getQueries()) {
         cout << currQuery.toString() << "?";
         Relation newRelation = evaluatePredicate(currQuery);

@@ -25,7 +25,7 @@ public:
     Relation rename(vector<string> newAttributes);
     Relation project(vector<int> columns);
     Relation join(Relation b, string ruleName);//, Header * combinedHeaders, vector <pair<int,int>> joinVector);
-    Relation unite(Relation r, bool & addTuple, string & output);
+    Relation unite(Relation databaseRelation, bool & addTuple, string & output);
     void addTuple(Tuple toAdd);
     string toString();
     bool isEmpty();
@@ -36,7 +36,7 @@ public:
     Header* getHeader();
     void setHeader(Header * newHeader);
     Tuple combineTuples(Tuple t, Tuple u, map<int,int> joinMap);
-    string convertTuple(Tuple t);
+    string convertTuple(Tuple t, Relation databaseRelation);
 
     void setDomain(set<Tuple> newDomain);
 
