@@ -190,6 +190,30 @@ ColonDashAutomaton.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\CS236_Project1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\CS236_Project1.dir\ColonDashAutomaton.cpp.s
 .PHONY : ColonDashAutomaton.cpp.s
 
+DGraph.obj: DGraph.cpp.obj
+.PHONY : DGraph.obj
+
+# target to build an object file
+DGraph.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CS236_Project1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\CS236_Project1.dir\DGraph.cpp.obj
+.PHONY : DGraph.cpp.obj
+
+DGraph.i: DGraph.cpp.i
+.PHONY : DGraph.i
+
+# target to preprocess a source file
+DGraph.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CS236_Project1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\CS236_Project1.dir\DGraph.cpp.i
+.PHONY : DGraph.cpp.i
+
+DGraph.s: DGraph.cpp.s
+.PHONY : DGraph.s
+
+# target to generate assembly for a file
+DGraph.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CS236_Project1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\CS236_Project1.dir\DGraph.cpp.s
+.PHONY : DGraph.cpp.s
+
 Database.obj: Database.cpp.obj
 .PHONY : Database.obj
 
@@ -760,6 +784,9 @@ help:
 	@echo ... ColonDashAutomaton.obj
 	@echo ... ColonDashAutomaton.i
 	@echo ... ColonDashAutomaton.s
+	@echo ... DGraph.obj
+	@echo ... DGraph.i
+	@echo ... DGraph.s
 	@echo ... Database.obj
 	@echo ... Database.i
 	@echo ... Database.s

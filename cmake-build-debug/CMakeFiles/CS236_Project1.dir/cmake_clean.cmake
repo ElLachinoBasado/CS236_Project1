@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/CS236_Project1.dir/BlockCommentAutomaton.cpp.obj"
   "CMakeFiles/CS236_Project1.dir/ColonAutomaton.cpp.obj"
   "CMakeFiles/CS236_Project1.dir/ColonDashAutomaton.cpp.obj"
+  "CMakeFiles/CS236_Project1.dir/DGraph.cpp.obj"
   "CMakeFiles/CS236_Project1.dir/Database.cpp.obj"
   "CMakeFiles/CS236_Project1.dir/DatalogProgram.cpp.obj"
   "CMakeFiles/CS236_Project1.dir/FactsAutomaton.cpp.obj"

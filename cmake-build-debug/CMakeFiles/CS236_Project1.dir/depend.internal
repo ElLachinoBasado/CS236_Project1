@@ -16,6 +16,17 @@ CMakeFiles/CS236_Project1.dir/ColonDashAutomaton.cpp.obj
  C:/Users/Helaman/CLionProjects/CS236_Project1/ColonDashAutomaton.cpp
  C:/Users/Helaman/CLionProjects/CS236_Project1/ColonDashAutomaton.h
  C:/Users/Helaman/CLionProjects/CS236_Project1/Token.h
+CMakeFiles/CS236_Project1.dir/DGraph.cpp.obj
+ C:/Users/Helaman/CLionProjects/CS236_Project1/DGraph.cpp
+ C:/Users/Helaman/CLionProjects/CS236_Project1/DGraph.h
+ C:/Users/Helaman/CLionProjects/CS236_Project1/Database.h
+ C:/Users/Helaman/CLionProjects/CS236_Project1/DatalogProgram.h
+ C:/Users/Helaman/CLionProjects/CS236_Project1/Header.h
+ C:/Users/Helaman/CLionProjects/CS236_Project1/Parameter.h
+ C:/Users/Helaman/CLionProjects/CS236_Project1/Predicate.h
+ C:/Users/Helaman/CLionProjects/CS236_Project1/Relation.h
+ C:/Users/Helaman/CLionProjects/CS236_Project1/Rule.h
+ C:/Users/Helaman/CLionProjects/CS236_Project1/Tuple.h
 CMakeFiles/CS236_Project1.dir/Database.cpp.obj
  C:/Users/Helaman/CLionProjects/CS236_Project1/Database.cpp
  C:/Users/Helaman/CLionProjects/CS236_Project1/Database.h
@@ -150,6 +161,7 @@ CMakeFiles/CS236_Project1.dir/UnclosedStringAutomaton.cpp.obj
  C:/Users/Helaman/CLionProjects/CS236_Project1/UnclosedStringAutomaton.h
 CMakeFiles/CS236_Project1.dir/main.cpp.obj
  C:/Users/Helaman/CLionProjects/CS236_Project1/Automaton.h
+ C:/Users/Helaman/CLionProjects/CS236_Project1/DGraph.h
  C:/Users/Helaman/CLionProjects/CS236_Project1/Database.h
  C:/Users/Helaman/CLionProjects/CS236_Project1/DatalogProgram.h
  C:/Users/Helaman/CLionProjects/CS236_Project1/Header.h

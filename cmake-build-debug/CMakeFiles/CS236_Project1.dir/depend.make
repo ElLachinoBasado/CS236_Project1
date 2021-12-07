@@ -16,6 +16,17 @@ CMakeFiles\CS236_Project1.dir\ColonDashAutomaton.cpp.obj: ..\ColonDashAutomaton.
 CMakeFiles\CS236_Project1.dir\ColonDashAutomaton.cpp.obj: ..\ColonDashAutomaton.h
 CMakeFiles\CS236_Project1.dir\ColonDashAutomaton.cpp.obj: ..\Token.h
 
+CMakeFiles\CS236_Project1.dir\DGraph.cpp.obj: ..\DGraph.cpp
+CMakeFiles\CS236_Project1.dir\DGraph.cpp.obj: ..\DGraph.h
+CMakeFiles\CS236_Project1.dir\DGraph.cpp.obj: ..\Database.h
+CMakeFiles\CS236_Project1.dir\DGraph.cpp.obj: ..\DatalogProgram.h
+CMakeFiles\CS236_Project1.dir\DGraph.cpp.obj: ..\Header.h
+CMakeFiles\CS236_Project1.dir\DGraph.cpp.obj: ..\Parameter.h
+CMakeFiles\CS236_Project1.dir\DGraph.cpp.obj: ..\Predicate.h
+CMakeFiles\CS236_Project1.dir\DGraph.cpp.obj: ..\Relation.h
+CMakeFiles\CS236_Project1.dir\DGraph.cpp.obj: ..\Rule.h
+CMakeFiles\CS236_Project1.dir\DGraph.cpp.obj: ..\Tuple.h
+
 CMakeFiles\CS236_Project1.dir\Database.cpp.obj: ..\Database.cpp
 CMakeFiles\CS236_Project1.dir\Database.cpp.obj: ..\Database.h
 CMakeFiles\CS236_Project1.dir\Database.cpp.obj: ..\Header.h
@@ -149,6 +160,7 @@ CMakeFiles\CS236_Project1.dir\UnclosedStringAutomaton.cpp.obj: ..\UnclosedString
 CMakeFiles\CS236_Project1.dir\UnclosedStringAutomaton.cpp.obj: ..\UnclosedStringAutomaton.h
 
 CMakeFiles\CS236_Project1.dir\main.cpp.obj: ..\Automaton.h
+CMakeFiles\CS236_Project1.dir\main.cpp.obj: ..\DGraph.h
 CMakeFiles\CS236_Project1.dir\main.cpp.obj: ..\Database.h
 CMakeFiles\CS236_Project1.dir\main.cpp.obj: ..\DatalogProgram.h
 CMakeFiles\CS236_Project1.dir\main.cpp.obj: ..\Header.h

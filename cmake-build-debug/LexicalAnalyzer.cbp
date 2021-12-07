@@ -105,6 +105,12 @@
 		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/ColonDashAutomaton.h">
 			<Option target="CS236_Project1"/>
 		</Unit>
+		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/DGraph.cpp">
+			<Option target="CS236_Project1"/>
+		</Unit>
+		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/DGraph.h">
+			<Option target="CS236_Project1"/>
+		</Unit>
 		<Unit filename="C:/Users/Helaman/CLionProjects/CS236_Project1/Database.cpp">
 			<Option target="CS236_Project1"/>
 		</Unit>

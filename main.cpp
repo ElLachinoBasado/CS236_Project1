@@ -4,6 +4,7 @@
 #include <iostream>
 #include <fstream>
 #include "Token.h"
+#include "DGraph.h"
 
 using namespace std;
 
@@ -37,6 +38,8 @@ int main(int argc, char** argv) {
     } catch (Token* token) {
         cout << "Failure!" << endl << token->toString();
     }
+
+    DGraph * dGraph = new DGraph(*datalog);
 
     Interpreter * interpreter = new Interpreter(datalog);
     interpreter->evaluateAllRules();
