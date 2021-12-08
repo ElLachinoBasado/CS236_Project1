@@ -161,9 +161,9 @@ Relation Relation::unite(Relation databaseRelation, bool & addTuple, string & ou
 
 string Relation::convertTuple(Tuple t, Relation databaseRelation) {
 
-    string result = "";
+    string result = "  ";
     for (unsigned int i = 0; i < databaseRelation.getHeader()->getAttributes().size()-1; i++) {
-        result += "  " + databaseRelation.getHeader()->getAttributes().at(i) + "=" + t.getValue(i) + ", ";
+        result += databaseRelation.getHeader()->getAttributes().at(i) + "=" + t.getValue(i) + ", ";
     }
     result += databaseRelation.getHeader()->getAttributes().at(databaseRelation.getHeader()->getAttributes().size()-1) + "=" + t.getValue(header->getAttributes().size()-1);
     return result;
