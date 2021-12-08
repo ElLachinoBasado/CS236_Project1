@@ -39,8 +39,6 @@ int main(int argc, char** argv) {
         cout << "Failure!" << endl << token->toString();
     }
 
-    DGraph * dGraph = new DGraph(*datalog);
-
     Interpreter * interpreter = new Interpreter(datalog);
     interpreter->evaluateAllRules();
     interpreter->evaluateAllQueries();

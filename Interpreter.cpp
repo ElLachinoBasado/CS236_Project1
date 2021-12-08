@@ -8,6 +8,7 @@ Interpreter::Interpreter(DatalogProgram * dpReference) {
     datalogProgram = * dpReference;
     datalogProgram.createDatabase();
     database = *datalogProgram.getDatabase();
+    dGraph = new DGraph(datalogProgram);
 }
 
 Relation Interpreter::evaluatePredicate(Predicate p) {

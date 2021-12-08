@@ -8,6 +8,8 @@ DGraph::DGraph(DatalogProgram datalog) {
     adjList = createAdjacencyList(datalog); //creates adjacency list
     reverseAdjList = createReverseAdjacencyList();
     reversePostOrder = createReversePostOrder();
+    sccList = generateSCCList();
+    printDGraph();
 }
 
 vector<set<int>> DGraph::createAdjacencyList(DatalogProgram datalog) {
@@ -48,7 +50,6 @@ vector<set<int>> DGraph::createReverseAdjacencyList() {
 
 vector<int> DGraph::createReversePostOrder() {
     vector<vector<int>> forest = dfsForest();
-
     vector<int> postOrder = processForest(forest);
     return postOrder;
 }
@@ -108,4 +109,58 @@ vector<int> DGraph::processForest(vector<vector<int>> forest) {
     }
 
     return postOrder;
+}
+
+vector<vector<int>>  DGraph::generateSCCList() {
+    vector<int> nodes;
+    for (int i = reversePostOrder.size() - 1; i >= 0; i--) {
+        nodes.push_back(reversePostOrder.at(i));
+    }
+
+    vector<vector<int>> sccOrder;
+    while (!nodes.empty()) {
+        vector<int> newScc = sccCreate(nodes);
+        sccOrder.push_back(newScc);
+    }
+
+    return sccOrder;
+}
+
+vector<int> DGraph::sccCreate(vector<int> & postOrder) {
+    vector <int> sccValues;
+    sccValues.push_back(postOrder.front());
+    postOrder.erase(postOrder.begin());
+
+    set<int> tempSet = adjList.at(sccValues.front());
+    for (int i : tempSet) {
+        for (int j = 0; j < postOrder.size(); j++) {
+            if (i == postOrder.at(j)) {
+                sccValues.push_back(postOrder.at(j));
+                postOrder.erase(postOrder.begin() + j);
+            }
+        }
+    }
+
+    return sccValues;
+}
+
+void DGraph::printDGraph() {
+    string output = "Dependency Graph\n";
+    int i = 0;
+    for (set<int> currRule : adjList) {
+        output += "R" + to_string(i) + ":";
+        int j = 0;
+        for (int currNode : currRule) {
+            j++;
+            output += "R" + to_string(currNode);
+            if (j != currRule.size()) output += ",";
+        }
+        output += "\n";
+        i++;
+    }
+    cout << output << endl;
+}
+
+vector<vector<int>> DGraph::getSCC() {
+    return sccList;
 }

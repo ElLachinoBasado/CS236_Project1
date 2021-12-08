@@ -2,14 +2,15 @@
 #define LEXICALANALYZER_INTERPRETER_H
 #include "DatalogProgram.h"
 #include "Database.h"
+#include "DGraph.h"
 
 class Interpreter {
 private:
     DatalogProgram datalogProgram;
     Database database;
+    DGraph * dGraph;
 public:
     Interpreter(DatalogProgram *dpReference);
-
     Relation evaluatePredicate(Predicate p);
 
     void evaluateAllQueries();

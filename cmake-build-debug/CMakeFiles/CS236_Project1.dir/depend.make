@@ -56,6 +56,7 @@ CMakeFiles\CS236_Project1.dir\IdAutomaton.cpp.obj: ..\IdAutomaton.cpp
 CMakeFiles\CS236_Project1.dir\IdAutomaton.cpp.obj: ..\IdAutomaton.h
 CMakeFiles\CS236_Project1.dir\IdAutomaton.cpp.obj: ..\Token.h
 
+CMakeFiles\CS236_Project1.dir\Interpreter.cpp.obj: ..\DGraph.h
 CMakeFiles\CS236_Project1.dir\Interpreter.cpp.obj: ..\Database.h
 CMakeFiles\CS236_Project1.dir\Interpreter.cpp.obj: ..\DatalogProgram.h
 CMakeFiles\CS236_Project1.dir\Interpreter.cpp.obj: ..\Header.h
