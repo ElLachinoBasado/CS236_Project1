@@ -88,7 +88,7 @@ vector<int> DGraph::createTree(vector<int> & nodes, vector<set<int>> & copyList)
 bool DGraph::pathExists(int & nodeToCheck, vector<int> & nodesLeft, vector<set<int>> & copyList) {
     set<int> terminalsToCheck = copyList.at(nodeToCheck);
 
-    for (unsigned int currTerminal : terminalsToCheck) {
+    for (int currTerminal : terminalsToCheck) {
         for (unsigned int node = 0; node < nodesLeft.size(); node++) {
             if (currTerminal == nodesLeft.at(node)) {
                 nodeToCheck = currTerminal;
@@ -166,7 +166,7 @@ void DGraph::printDGraph() {
     int i = 0;
     for (set<int> currRule : adjList) {
         output += "R" + to_string(i) + ":";
-        int j = 0;
+        unsigned int j = 0;
         for (int currNode : currRule) {
             j++;
             output += "R" + to_string(currNode);

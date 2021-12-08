@@ -116,7 +116,7 @@ bool Interpreter::isSelfDependent(set<int> currentSCC) {
 
 string Interpreter::sccToString(set<int> currentSCC) {
     string output = "";
-    int i = 0;
+    unsigned int i = 0;
     for (int j : currentSCC) {
         output += "R" + to_string(j);
         i++;
