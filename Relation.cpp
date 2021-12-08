@@ -26,13 +26,14 @@ string Relation::toString() {
     vector<string> headerValues = header->getAttributes();
     newString = newString + "(" + to_string(domain.size()) + ")" + "\n";
     for (auto thisTuple : domain) {
+        newString += " ";
         for (unsigned int i = 0; i < headerValues.size(); i++) {
-            newString += "  ";
+            newString += " ";
             newString += headerValues.at(i);
             newString += "=";
             newString += thisTuple.toString(i);
             if (i != headerValues.size() - 1) {
-                newString += ", ";
+                newString += ",";
             } else {
                 newString += "\n";
             }

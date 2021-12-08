@@ -41,7 +41,7 @@ int main(int argc, char** argv) {
 
     Interpreter * interpreter = new Interpreter(datalog);
     interpreter->evaluateAllSCCRules();    //interpreter->evaluateAllRules();
-    //interpreter->evaluateAllQueries();
+    interpreter->evaluateAllQueries();
     //deletes stuff
     delete lexer;
     delete parser;

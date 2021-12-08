@@ -78,9 +78,40 @@ void Interpreter::evaluateAllSCCRules() {
     for (set<int> currentSCC : dGraph->getFinalSCC()) {
         output += "SCC: ";
         output += sccToString(currentSCC);
-    }
 
+        int numberOfIterations = 0;
+        bool keepRepeating = true;
+
+        if (currentSCC.size() == 1 && !isSelfDependent(currentSCC)) {
+            for (int i : currentSCC) {
+                Rule currentRule = datalogProgram.getRules().at(i);
+                output += currentRule.toString() + "\n";
+                evaluateRule(currentRule,output);
+            }
+            numberOfIterations = 1;
+        } else {
+            do {
+                keepRepeating = false;
+                for (int i : currentSCC) {
+                    Rule currentRule = datalogProgram.getRules().at(i);
+                    output += currentRule.toString() + "\n";
+                    if (evaluateRule(currentRule,output)) keepRepeating = true;
+                }
+                numberOfIterations++;
+            } while (keepRepeating);
+        }
+        output += to_string(numberOfIterations) + " passes: " + sccToString(currentSCC);
+    }
     cout << output;
+}
+
+bool Interpreter::isSelfDependent(set<int> currentSCC) {
+    Rule currentSCCRule = datalogProgram.getRules().at(*currentSCC.begin());
+    string currentSCCName = currentSCCRule.getHeadPredicate()->getName();
+    for (Predicate currPredicate : currentSCCRule.getPredicateList()) {
+        if (currPredicate.getName() == currentSCCName) return true;
+    }
+    return false;
 }
 
 string Interpreter::sccToString(set<int> currentSCC) {

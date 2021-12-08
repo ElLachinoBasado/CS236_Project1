@@ -22,5 +22,6 @@ public:
     Relation joinRelations(vector<Relation> relations, string ruleName);
 
     string sccToString(set<int> currentSCC);
+    bool isSelfDependent(set<int> currentSCC);
 };
 #endif //LEXICALANALYZER_INTERPRETER_H
