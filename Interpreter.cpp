@@ -72,6 +72,29 @@ void Interpreter::evaluateAllRules() {
     cout << output << endl << "Schemes populated after " << numberOfIterations << " passes through the Rules." << endl;
 }
 
+void Interpreter::evaluateAllSCCRules() {
+    string output = "Rule Evaluation\n";
+
+    for (set<int> currentSCC : dGraph->getFinalSCC()) {
+        output += "SCC: ";
+        output += sccToString(currentSCC);
+    }
+
+    cout << output;
+}
+
+string Interpreter::sccToString(set<int> currentSCC) {
+    string output = "";
+    int i = 0;
+    for (int j : currentSCC) {
+        output += "R" + to_string(j);
+        i++;
+        if (i != currentSCC.size()) output += ",";
+    }
+    output += "\n";
+    return output;
+}
+
 bool Interpreter::evaluateRule(Rule evaluatedRule, string & output) {
     vector<Relation> relations = getIntermediateRelations(evaluatedRule); //gets intermediate relations
 

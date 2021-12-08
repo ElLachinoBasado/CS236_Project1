@@ -16,6 +16,7 @@ private:
     vector<set<int>> reverseAdjList;
     vector<int> reversePostOrder;
     vector<vector<int>> sccList;
+    vector<set<int>> finalSCCList;
 public:
     DGraph(DatalogProgram datalog);
 
@@ -31,9 +32,11 @@ public:
 
     vector<vector<int>>  generateSCCList();
     vector<int> sccCreate(vector<int> & postOrder);
+    vector<set<int>> generateFinalSCCList();
 
     void printDGraph();
     vector<vector<int>> getSCC();
+    vector<set<int>> getFinalSCC();
 };
 
 

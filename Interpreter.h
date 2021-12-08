@@ -15,9 +15,12 @@ public:
 
     void evaluateAllQueries();
     void evaluateAllRules();
+    void evaluateAllSCCRules();
 
     bool evaluateRule(Rule evaluatedRule, string & output);
     vector<Relation> getIntermediateRelations(Rule ruleToCheck);
     Relation joinRelations(vector<Relation> relations, string ruleName);
+
+    string sccToString(set<int> currentSCC);
 };
 #endif //LEXICALANALYZER_INTERPRETER_H

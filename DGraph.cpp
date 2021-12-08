@@ -9,6 +9,7 @@ DGraph::DGraph(DatalogProgram datalog) {
     reverseAdjList = createReverseAdjacencyList();
     reversePostOrder = createReversePostOrder();
     sccList = generateSCCList();
+    finalSCCList = generateFinalSCCList();
     printDGraph();
 }
 
@@ -16,11 +17,11 @@ vector<set<int>> DGraph::createAdjacencyList(DatalogProgram datalog) {
     vector<Rule> allRules = datalog.getRules();
     vector<set<int>> adjacencyList;
 
-    for (int row = 0; row < allRules.size(); row++) {
+    for (unsigned int row = 0; row < allRules.size(); row++) {
         set<int> newRow;
         vector<Predicate> currentRulePredicates = allRules.at(row).getPredicateList(); //retrieves the current rule's predicates
         for (Predicate currentPredicate : currentRulePredicates) {
-            for (int i = 0; i < allRules.size(); i++) {
+            for (unsigned int i = 0; i < allRules.size(); i++) {
                 if (currentPredicate.getName() == allRules.at(i).getHeadPredicate()->getName()) {
                     newRow.insert(i);
                 }
@@ -34,12 +35,12 @@ vector<set<int>> DGraph::createAdjacencyList(DatalogProgram datalog) {
 
 vector<set<int>> DGraph::createReverseAdjacencyList() {
     vector<set<int>> reverseAdjacencyList;
-    for (int row = 0; row < adjList.size(); row++) { // initializes set of empty rows
+    for (unsigned int row = 0; row < adjList.size(); row++) { // initializes set of empty rows
         set<int> newRow;
         reverseAdjacencyList.push_back(newRow);
     }
 
-    for (int currentNode = 0; currentNode < adjList.size(); currentNode++) {
+    for (unsigned int currentNode = 0; currentNode < adjList.size(); currentNode++) {
         for (int i : adjList.at(currentNode)) {
             reverseAdjacencyList.at(i).insert(currentNode);
         }
@@ -50,14 +51,15 @@ vector<set<int>> DGraph::createReverseAdjacencyList() {
 
 vector<int> DGraph::createReversePostOrder() {
     vector<vector<int>> forest = dfsForest();
-    vector<int> postOrder = processForest(forest);
+    vector<int> postOrder;
+    postOrder = processForest(forest);
     return postOrder;
 }
 
 vector<vector<int>> DGraph::dfsForest() {
     vector<set<int>> copyList = reverseAdjList;
     vector<int> nodes;
-    for (int i = 0; i < reverseAdjList.size(); i++) { // populates nodes to have R0...RN, where N is the # of nodes
+    for (unsigned int i = 0; i < reverseAdjList.size(); i++) { // populates nodes to have R0...RN, where N is the # of nodes
         nodes.push_back(i);
     }
 
@@ -86,8 +88,8 @@ vector<int> DGraph::createTree(vector<int> & nodes, vector<set<int>> & copyList)
 bool DGraph::pathExists(int & nodeToCheck, vector<int> & nodesLeft, vector<set<int>> & copyList) {
     set<int> terminalsToCheck = copyList.at(nodeToCheck);
 
-    for (int currTerminal : terminalsToCheck) {
-        for (int node = 0; node < nodesLeft.size(); node++) {
+    for (unsigned int currTerminal : terminalsToCheck) {
+        for (unsigned int node = 0; node < nodesLeft.size(); node++) {
             if (currTerminal == nodesLeft.at(node)) {
                 nodeToCheck = currTerminal;
                 nodesLeft.erase(nodesLeft.begin() + node);
@@ -102,9 +104,10 @@ bool DGraph::pathExists(int & nodeToCheck, vector<int> & nodesLeft, vector<set<i
 vector<int> DGraph::processForest(vector<vector<int>> forest) {
     vector<int> postOrder;
 
-    for (int i = 0; i < forest.size(); i++) {
-        for (int j = forest.at(i).size() - 1; j >= 0; j--) {
-            postOrder.push_back(forest.at(i).at(j));
+    //for (unsigned int i = 0; i < forest.size(); i++) {
+    for (vector<int> currentVector : forest) {
+        for (unsigned int j = currentVector.size() - 1; j != static_cast<unsigned>(-1); j--) {
+            postOrder.push_back(currentVector.at(j));
         }
     }
 
@@ -113,7 +116,7 @@ vector<int> DGraph::processForest(vector<vector<int>> forest) {
 
 vector<vector<int>>  DGraph::generateSCCList() {
     vector<int> nodes;
-    for (int i = reversePostOrder.size() - 1; i >= 0; i--) {
+    for (unsigned int i = reversePostOrder.size() - 1; i != static_cast<unsigned>(-1); i--) {
         nodes.push_back(reversePostOrder.at(i));
     }
 
@@ -133,7 +136,7 @@ vector<int> DGraph::sccCreate(vector<int> & postOrder) {
 
     set<int> tempSet = adjList.at(sccValues.front());
     for (int i : tempSet) {
-        for (int j = 0; j < postOrder.size(); j++) {
+        for (unsigned int j = 0; j < postOrder.size(); j++) {
             if (i == postOrder.at(j)) {
                 sccValues.push_back(postOrder.at(j));
                 postOrder.erase(postOrder.begin() + j);
@@ -142,6 +145,20 @@ vector<int> DGraph::sccCreate(vector<int> & postOrder) {
     }
 
     return sccValues;
+}
+
+vector<set<int>> DGraph::generateFinalSCCList() {
+    vector<set<int>> finalList;
+
+    for (vector<int> currentVector : sccList) {
+        set<int> tempSet;
+        for (int i : currentVector) {
+            tempSet.emplace(i);
+        }
+        finalList.push_back(tempSet);
+    }
+
+    return finalList;
 }
 
 void DGraph::printDGraph() {
@@ -163,4 +180,8 @@ void DGraph::printDGraph() {
 
 vector<vector<int>> DGraph::getSCC() {
     return sccList;
+}
+
+vector<set<int>> DGraph::getFinalSCC() {
+    return finalSCCList;
 }
