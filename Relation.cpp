@@ -26,8 +26,8 @@ string Relation::toString() {
     vector<string> headerValues = header->getAttributes();
     newString = newString + "(" + to_string(domain.size()) + ")" + "\n";
     for (auto thisTuple : domain) {
-        newString += " ";
         for (unsigned int i = 0; i < headerValues.size(); i++) {
+            if (i == 0) newString += " ";
             newString += " ";
             newString += headerValues.at(i);
             newString += "=";
