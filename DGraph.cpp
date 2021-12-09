@@ -96,7 +96,7 @@ int DGraph::nextNode(vector<int> nodeOrder, set<int> & nodesVisited) {
 }
 
 void DGraph::clearNodeFromSet(int node, vector<set<int>> & copyList) {
-    for (int i = 0; i < copyList.size(); i++) {
+    for (unsigned int i = 0; i < copyList.size(); i++) {
         copyList.at(i).erase(node);
     }
 }
