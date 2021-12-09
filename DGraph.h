@@ -25,10 +25,14 @@ public:
     vector<set<int>> createReverseAdjacencyList();
 
     vector<int> createReversePostOrder();
-    vector<vector<int>> dfsForest();
-    vector<int> createTree(vector<int> & nodes, vector<set<int>> & copyList);
-    bool pathExists(int & nodeToCheck, vector<int> & nodesLeft, vector<set<int>> & copyList);
-    vector<int> processForest(vector<vector<int>> forest);
+    void processNodes(vector<int> & nodeOrder, set<int> & nodesVisited, vector<set<int>> & copyList, vector<int> & postOrder);
+    void clearNodeFromSet(int node, vector<set<int>> & copyList);
+    int nextNode(vector<int> nodeOrder, set<int> & nodesVisited);
+    void recursion(int node, set<int> & nodesVisited, vector<set<int>> & copyList, vector<int> & postOrder);
+    //vector<vector<int>> dfsForest();
+    //vector<int> createTree(vector<int> & nodes, vector<set<int>> & copyList);
+    //bool pathExists(int & nodeToCheck, vector<int> & nodesLeft, vector<set<int>> & copyList);
+    //vector<int> processForest(vector<vector<int>> forest);
 
     vector<vector<int>>  generateSCCList();
     vector<int> sccCreate(vector<int> & postOrder);

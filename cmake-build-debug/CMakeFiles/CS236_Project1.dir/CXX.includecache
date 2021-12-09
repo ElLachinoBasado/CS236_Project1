@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/Helaman/CLionProjects/CS236_Project1/DGraph.cpp
+DGraph.h
+C:/Users/Helaman/CLionProjects/CS236_Project1/DGraph.h
+
 C:/Users/Helaman/CLionProjects/CS236_Project1/DGraph.h
 vector
 -
@@ -48,18 +52,6 @@ string
 vector
 -
 
-C:/Users/Helaman/CLionProjects/CS236_Project1/Interpreter.cpp
-Interpreter.h
-C:/Users/Helaman/CLionProjects/CS236_Project1/Interpreter.h
-
-C:/Users/Helaman/CLionProjects/CS236_Project1/Interpreter.h
-DatalogProgram.h
-C:/Users/Helaman/CLionProjects/CS236_Project1/DatalogProgram.h
-Database.h
-C:/Users/Helaman/CLionProjects/CS236_Project1/Database.h
-DGraph.h
-C:/Users/Helaman/CLionProjects/CS236_Project1/DGraph.h
-
 C:/Users/Helaman/CLionProjects/CS236_Project1/Parameter.h
 string
 -
@@ -71,10 +63,6 @@ vector
 -
 Parameter.h
 C:/Users/Helaman/CLionProjects/CS236_Project1/Parameter.h
-
-C:/Users/Helaman/CLionProjects/CS236_Project1/Relation.cpp
-Relation.h
-C:/Users/Helaman/CLionProjects/CS236_Project1/Relation.h
 
 C:/Users/Helaman/CLionProjects/CS236_Project1/Relation.h
 Tuple.h

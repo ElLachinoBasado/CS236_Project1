@@ -50,13 +50,62 @@ vector<set<int>> DGraph::createReverseAdjacencyList() {
 }
 
 vector<int> DGraph::createReversePostOrder() {
-    vector<vector<int>> forest = dfsForest();
+    vector<int> nodeOrder;
+    set<int> nodesVisited;
+    for (unsigned int i = 0; i < reverseAdjList.size(); i++) { // populates nodes to have R0...RN, where N is the # of nodes
+        nodeOrder.push_back(i);
+    }
+    vector<set<int>> copyList = reverseAdjList;
     vector<int> postOrder;
-    postOrder = processForest(forest);
+
+    while (nodesVisited.size() < reverseAdjList.size()) {
+        processNodes(nodeOrder,nodesVisited,copyList,postOrder);
+    }
+
     return postOrder;
 }
 
-vector<vector<int>> DGraph::dfsForest() {
+void DGraph::processNodes(vector<int> & nodeOrder, set<int> & nodesVisited, vector<set<int>> & copyList, vector<int> & postOrder) {
+    int frontNode = nextNode(nodeOrder,nodesVisited);
+    recursion(frontNode,nodesVisited,copyList,postOrder);
+}
+
+void DGraph::recursion(int node, set<int> & nodesVisited, vector<set<int>> & copyList, vector<int> & postOrder) {
+    clearNodeFromSet(node,copyList);
+    while (!copyList.at(node).empty()) {
+        recursion(*copyList.at(node).begin(),nodesVisited,copyList,postOrder);
+    }
+    nodesVisited.emplace(node);
+    postOrder.push_back(node);
+}
+
+int DGraph::nextNode(vector<int> nodeOrder, set<int> & nodesVisited) {
+    int nodeToUse;
+    bool found = false;
+    int i = 0;
+    while (!found) {
+        if (nodesVisited.count(nodeOrder.at(i)) == 0) {
+            found = true;
+            nodeToUse = nodeOrder.at(i);
+        } else {
+            i++;
+        }
+    }
+    nodesVisited.emplace(nodeToUse);
+    return nodeToUse;
+}
+
+void DGraph::clearNodeFromSet(int node, vector<set<int>> & copyList) {
+    for (int i = 0; i < copyList.size(); i++) {
+        copyList.at(i).erase(node);
+    }
+}
+
+/**
+ *
+ */
+
+/** vector<vector<int>> DGraph::dfsForest() {
     vector<set<int>> copyList = reverseAdjList;
     vector<int> nodes;
     for (unsigned int i = 0; i < reverseAdjList.size(); i++) { // populates nodes to have R0...RN, where N is the # of nodes
@@ -100,8 +149,8 @@ bool DGraph::pathExists(int & nodeToCheck, vector<int> & nodesLeft, vector<set<i
 
     return false;
 }
-
-vector<int> DGraph::processForest(vector<vector<int>> forest) {
+**/
+/** vector<int> DGraph::processForest(vector<vector<int>> forest) {
     vector<int> postOrder;
 
     //for (unsigned int i = 0; i < forest.size(); i++) {
@@ -112,7 +161,7 @@ vector<int> DGraph::processForest(vector<vector<int>> forest) {
     }
 
     return postOrder;
-}
+} **/
 
 vector<vector<int>>  DGraph::generateSCCList() {
     vector<int> nodes;
