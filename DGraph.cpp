@@ -8,8 +8,7 @@ DGraph::DGraph(DatalogProgram datalog) {
     adjList = createAdjacencyList(datalog); //creates adjacency list
     reverseAdjList = createReverseAdjacencyList();
     reversePostOrder = createReversePostOrder();
-    sccList = generateSCCList();
-    finalSCCList = generateFinalSCCList();
+    finalSCCList = generateSCCList();
     printDGraph();
 }
 
@@ -95,11 +94,7 @@ int DGraph::nextNode(vector<int> nodeOrder, set<int> & nodesVisited) {
     return nodeToUse;
 }
 
-void DGraph::clearNodeFromSet(int node, vector<set<int>> & copyList) {
-    for (unsigned int i = 0; i < copyList.size(); i++) {
-        copyList.at(i).erase(node);
-    }
-}
+
 
 /**
  *
@@ -163,8 +158,8 @@ bool DGraph::pathExists(int & nodeToCheck, vector<int> & nodesLeft, vector<set<i
     return postOrder;
 } **/
 
-vector<vector<int>>  DGraph::generateSCCList() {
-    vector<int> nodes;
+vector<set<int>>  DGraph::generateSCCList() {
+    /**    vector<int> nodes;
     for (unsigned int i = reversePostOrder.size() - 1; i != static_cast<unsigned>(-1); i--) {
         nodes.push_back(reversePostOrder.at(i));
     }
@@ -176,12 +171,64 @@ vector<vector<int>>  DGraph::generateSCCList() {
     }
 
     return sccOrder;
+    **/
+
+    vector<int> nodeOrder;
+    for (unsigned int i = reversePostOrder.size() - 1; i != static_cast<unsigned>(-1); i--) {
+        nodeOrder.push_back(reversePostOrder.at(i));
+    }
+    vector<set<int>> sccOrder;
+    vector<set<int>> copyList = adjList;
+
+    while (nodeOrder.size() > 0) {
+        fillSCCOrder(sccOrder, nodeOrder, copyList);
+    }
+
+    return sccOrder;
 }
 
+void DGraph::fillSCCOrder(vector<set<int>> & sccOrder, vector<int> & nodeOrder, vector<set<int>> & copyList) {
+    int frontNode = 0;
+    set<int> currentSCC;
+    sccRecursion(frontNode,currentSCC,nodeOrder,copyList);
+    sccOrder.push_back(currentSCC);
+}
+
+void DGraph::sccRecursion(int node,set<int> & currentSCC, vector<int> & nodeOrder, vector<set<int>> & copyList) {
+    int nodeValue = nodeOrder.at(node);
+    clearNodeFromSet(nodeValue,copyList);
+    currentSCC.emplace(nodeValue);
+    nodeOrder.erase(nodeOrder.begin()+node);
+    while (!copyList.at(nodeValue).empty()) {
+        int nextNodeToPass = *copyList.at(nodeValue).begin();
+        nextNodeToPass = findPosition(nodeOrder,nextNodeToPass);
+        sccRecursion(nextNodeToPass,currentSCC,nodeOrder,copyList);
+    }
+
+}
+
+int DGraph::findPosition(vector<int> nodeOrder,int nextNodeToPass) {
+    int position;
+    for (unsigned int i = 0; i < nodeOrder.size(); i++) {
+        if (nodeOrder.at(i) == nextNodeToPass) {
+            position = i;
+        }
+    }
+    return position;
+}
+
+void DGraph::clearNodeFromSet(int node, vector<set<int>> & copyList) {
+    for (unsigned int i = 0; i < copyList.size(); i++) {
+        copyList.at(i).erase(node);
+    }
+}
+/**
 vector<int> DGraph::sccCreate(vector<int> & postOrder) {
     vector <int> sccValues;
+
     sccValues.push_back(postOrder.front());
     postOrder.erase(postOrder.begin());
+
 
     set<int> tempSet = adjList.at(sccValues.front());
     for (int i : tempSet) {
@@ -193,10 +240,11 @@ vector<int> DGraph::sccCreate(vector<int> & postOrder) {
         }
     }
 
-    return sccValues;
-}
 
-vector<set<int>> DGraph::generateFinalSCCList() {
+    return sccValues;
+} **/
+
+/**vector<set<int>> DGraph::generateFinalSCCList() {
     vector<set<int>> finalList;
 
     for (vector<int> currentVector : sccList) {
@@ -208,7 +256,7 @@ vector<set<int>> DGraph::generateFinalSCCList() {
     }
 
     return finalList;
-}
+} **/
 
 void DGraph::printDGraph() {
     string output = "Dependency Graph\n";
@@ -227,9 +275,10 @@ void DGraph::printDGraph() {
     cout << output << endl;
 }
 
+/**
 vector<vector<int>> DGraph::getSCC() {
     return sccList;
-}
+} **/
 
 vector<set<int>> DGraph::getFinalSCC() {
     return finalSCCList;

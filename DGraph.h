@@ -15,7 +15,6 @@ private:
     vector<set<int>> adjList;
     vector<set<int>> reverseAdjList;
     vector<int> reversePostOrder;
-    vector<vector<int>> sccList;
     vector<set<int>> finalSCCList;
 public:
     DGraph(DatalogProgram datalog);
@@ -29,17 +28,20 @@ public:
     void clearNodeFromSet(int node, vector<set<int>> & copyList);
     int nextNode(vector<int> nodeOrder, set<int> & nodesVisited);
     void recursion(int node, set<int> & nodesVisited, vector<set<int>> & copyList, vector<int> & postOrder);
+    int findPosition(vector<int> nodeOrder,int nextNodeToPass);
     //vector<vector<int>> dfsForest();
     //vector<int> createTree(vector<int> & nodes, vector<set<int>> & copyList);
     //bool pathExists(int & nodeToCheck, vector<int> & nodesLeft, vector<set<int>> & copyList);
     //vector<int> processForest(vector<vector<int>> forest);
 
-    vector<vector<int>>  generateSCCList();
-    vector<int> sccCreate(vector<int> & postOrder);
-    vector<set<int>> generateFinalSCCList();
+    vector<set<int>>  generateSCCList();
+    void fillSCCOrder(vector<set<int>> & sccOrder, vector<int> & nodeOrder, vector<set<int>> & copyList);
+    void sccRecursion(int node,set<int> & currentSCC,vector<int> & nodeOrder, vector<set<int>> & copyList);
+    //vector<int> sccCreate(vector<int> & postOrder);
+    //vector<set<int>> generateFinalSCCList();
 
     void printDGraph();
-    vector<vector<int>> getSCC();
+    //vector<vector<int>> getSCC();
     vector<set<int>> getFinalSCC();
 };
 
